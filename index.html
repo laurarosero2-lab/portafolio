@@ -1,359 +1,758 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Laura Rosero Chavarriaga</title>
-    <style>
-        /* --- ESTILOS GENERALES Y PALETA DE COLORES --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laura Rosero Chavarriaga | Portafolio</title>
 
-        body {
-            background-color: #fcf8f9; /* Fondo claro general */
-            color: #333333;
-            line-height: 1.6;
-        }
+<style>
+:root{
+    --bg:#faf8f5;
+    --text:#1f1f1f;
+    --primary:#b46a3a;
+    --secondary:#586c5d;
+    --card:#ffffff;
+    --border:#e7e1da;
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+}
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        /* --- MENÚ DE NAVEGACIÓN --- */
-        header {
-            background-color: #ffffff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+body{
+    font-family:"Poppins", sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+}
 
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: flex-end;
-            padding: 20px;
-        }
+img{
+    max-width:100%;
+    display:block;
+}
 
-        nav a {
-            margin-left: 25px;
-            font-weight: 600;
-            color: #555;
-            transition: color 0.3s;
-        }
+.container{
+    width:min(1120px, 92%);
+    margin:auto;
+}
 
-        nav a:hover {
-            color: #b9838f;
-        }
+section{
+    padding:90px 0;
+}
 
-        /* --- SECCIÓN PRINCIPAL / HERO --- */
-        .hero {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
+/* ===== HEADER ===== */
+header{
+    position:sticky;
+    top:0;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+    z-index:100;
+}
 
-        .hero-img {
-            flex: 1;
-            max-width: 350px;
-        }
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
 
-        .hero-img img {
-            width: 100%;
-            border-radius: 20px;
-            object-fit: cover;
-        }
+.nav a{
+    text-decoration:none;
+    color:var(--text);
+    margin-left:28px;
+    font-weight:500;
+    transition:.3s;
+}
 
-        .hero-text {
-            flex: 2;
-        }
+.nav a:hover{
+    color:var(--primary);
+}
 
-        .hero-text h1 {
-            font-size: 3rem;
-            color: #333;
-            line-height: 1.1;
-            margin-bottom: 5px;
-        }
+/* ===== HERO ===== */
+.hero{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+    align-items:center;
+    min-height:90vh;
+}
 
-        .hero-text .apellido {
-            display: block;
-            margin-bottom: 15px;
-        }
+.hero h1{
+    font-size:clamp(2.5rem, 5vw, 4.6rem);
+    line-height:1.1;
+    margin-bottom:18px;
+}
 
-        .hero-text h2 {
-            font-size: 1.3rem;
-            color: #b9838f;
-            font-weight: 500;
-            margin-bottom: 25px;
-        }
+.hero h2{
+    color:var(--primary);
+    font-size:1.2rem;
+    font-weight:600;
+    margin-bottom:28px;
+}
 
-        /* --- ACERCA DE MI Y EDUCACIÓN --- */
-        .info-section {
-            max-width: 1200px;
-            margin: 0 auto 60px auto;
-            padding: 0 20px;
-            display: flex;
-            gap: 50px;
-        }
+.hero p{
+    margin-bottom:32px;
+    color:#4a4a4a;
+}
 
-        .about, .education {
-            flex: 1;
-        }
+.hero-buttons{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+}
 
-        h3 {
-            font-size: 1.6rem;
-            color: #333;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #b9838f;
-            padding-bottom: 5px;
-            display: inline-block;
-        }
+.btn{
+    padding:14px 26px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
 
-        .edu-item {
-            margin-bottom: 20px;
-        }
+.btn-primary{
+    background:var(--primary);
+    color:#fff;
+}
 
-        .edu-item h4 {
-            font-size: 1.1rem;
-            color: #444;
-        }
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:var(--shadow);
+}
 
-        .edu-item p {
-            color: #777;
-            font-size: 0.95rem;
-        }
+.btn-outline{
+    border:2px solid var(--primary);
+    color:var(--primary);
+}
 
-        /* --- SECCIÓN PROYECTOS (WIREFRAME DE COLOR) --- */
-        .projects-section {
-            background-color: #b9838f; /* Tono rosa del fondo del wireframe */
-            padding: 60px 20px;
-            color: #ffffff;
-        }
+.btn-outline:hover{
+    background:var(--primary);
+    color:#fff;
+}
 
-        .projects-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.hero-image{
+    position:relative;
+}
 
-        .projects-section h3 {
-            color: #ffffff;
-            border-bottom-color: #ffffff;
-            margin-bottom: 40px;
-        }
+.hero-image img{
+    border-radius:28px;
+    box-shadow:var(--shadow);
+}
 
-        .grid-projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-        }
+.badge{
+    position:absolute;
+    bottom:24px;
+    left:-18px;
+    background:var(--card);
+    padding:16px 22px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+}
 
-        .card {
-            display: flex;
-            flex-direction: column;
-        }
+.badge strong{
+    display:block;
+    color:var(--primary);
+}
 
-        .card-image-placeholder {
-            background-color: #55343b; /* Color oscuro simulando las imágenes del wireframe */
-            height: 250px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 15px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            color: #dfb2bc;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-        }
+/* ===== TITLES ===== */
+.section-title{
+    font-size:2.4rem;
+    margin-bottom:16px;
+}
 
-        /* Simulación de la interfaz UX/UI blanca dentro de la segunda tarjeta */
-        .card-image-placeholder.ux-ui {
-            background-color: #e0e0e0;
-            color: #333;
-            font-size: 0.75rem;
-            font-weight: normal;
-            display: block;
-            padding: 10px;
-            overflow: hidden;
-        }
+.section-subtitle{
+    color:#666;
+    max-width:700px;
+    margin-bottom:50px;
+}
 
-        .ux-mockup {
-            background: white;
-            border-radius: 5px;
-            height: 100%;
-            padding: 8px;
-            text-align: left;
-            border: 1px solid #ccc;
-        }
+/* ===== ABOUT ===== */
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
 
-        .ux-mockup div {
-            background: #eee;
-            margin-bottom: 6px;
-            padding: 4px;
-            border-radius: 3px;
-            font-size: 9px;
-            font-weight: bold;
-        }
+.about-card{
+    background:var(--card);
+    padding:36px;
+    border-radius:24px;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+}
 
-        .card h4 {
-            margin-top: 15px;
-            font-size: 1.3rem;
-            font-weight: 600;
-            line-height: 1.2;
-        }
+.about-card h3{
+    margin-bottom:18px;
+    color:var(--primary);
+}
 
-        /* --- SECCIÓN CONTACTO / FOOTER --- */
-        .contact-section {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
-            text-align: center;
-        }
+/* ===== EDUCATION ===== */
+.timeline{
+    position:relative;
+    margin-top:20px;
+}
 
-        .btn-contacto {
-            display: inline-block;
-            background-color: #b9838f;
-            color: white;
-            padding: 12px 35px;
-            border-radius: 30px;
-            font-weight: 600;
-            margin-top: 20px;
-            transition: background 0.3s, transform 0.2s;
-        }
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:20px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:var(--border);
+}
 
-        .btn-contacto:hover {
-            background-color: #9e6773;
-            transform: translateY(-2px);
-        }
+.timeline-item{
+    position:relative;
+    padding-left:70px;
+    margin-bottom:40px;
+}
 
-        /* --- RESPONSIVE (MÓVILES) --- */
-        @media (max-width: 768px) {
-            nav { justify-content: center; }
-            .hero { flex-direction: column; text-align: center; }
-            .info-section { flex-direction: column; gap: 30px; }
-            .hero-text h1 { font-size: 2.2rem; }
-        }
-    </style>
+.timeline-item::before{
+    content:"";
+    position:absolute;
+    left:11px;
+    top:8px;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:var(--primary);
+    border:4px solid var(--bg);
+}
+
+.timeline-card{
+    background:var(--card);
+    padding:28px;
+    border-radius:22px;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+}
+
+.timeline-card h3{
+    margin-bottom:8px;
+}
+
+.timeline-card .institution{
+    color:var(--secondary);
+    font-weight:600;
+}
+
+.timeline-card .year{
+    color:var(--primary);
+    font-weight:600;
+    margin-top:6px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:900px){
+
+    .hero,
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding-top:40px;
+    }
+
+    .hero-image{
+        order:-1;
+    }
+
+    .nav{
+        flex-direction:column;
+        gap:14px;
+    }
+
+    .nav-links{
+        display:flex;
+        gap:16px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .nav a{
+        margin:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+    <div class="container nav">
+
+        <h3>Laura Rosero</h3>
+
+        <div class="nav-links">
+            <a href="#about">Acerca de mí</a>
+            <a href="#education">Educación</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#contact">Contacto</a>
+        </div>
+
+    </div>
+</header>
+
+<main>
+
+<!-- ===== HERO ===== -->
+<section class="container hero">
+
+    <div>
+
+        <h1>Laura Rosero Chavarriaga</h1>
+
+        <h2>
+            Comunicadora Social · Diseñadora Gráfica ·
+            Branding & Experiencias de Marca
+        </h2>
+
+        <p>
+            Especialista en Diseño Publicitario en Contenidos Digitales.
+            Integro branding, comunicación institucional y diseño gráfico
+            para empresas privadas e instituciones públicas.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">Ver proyectos</a>
+            <a href="#contact" class="btn btn-outline">Contactar</a>
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="IMG_4942.JPG" alt="Laura Rosero">
+
+        <div class="badge">
+            <strong>UX/UI en formación</strong>
+            Estrategia + Creatividad + Diseño
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+
+    <div class="container">
+
+        <h2 class="section-title">Acerca de mí</h2>
+
+        <p class="section-subtitle">
+            Soy Comunicadora Social y especialista en Diseño Publicitario
+            en Contenidos Digitales. Mi experiencia reúne branding,
+            comunicación institucional y diseño gráfico para empresas
+            privadas e instituciones públicas.
+        </p>
+
+        <div class="about">
+
+            <div class="about-card">
+                <h3>Mi enfoque</h3>
+                <p>
+                    Desarrollo proyectos que conectan estrategia,
+                    identidad visual y comunicación para construir
+                    marcas coherentes y memorables.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h3>Actualmente</h3>
+                <p>
+                    Complemento mi perfil con formación en UX/UI,
+                    integrando diseño centrado en las personas,
+                    experiencia de usuario y comunicación visual.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===== EDUCATION ===== -->
+<section id="education">
+
+    <div class="container">
+
+        <h2 class="section-title">Educación</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-card">
+                    <h3>Especialista en Diseño Publicitario en Contenidos Digitales</h3>
+                    <p class="institution">Universidad Autónoma de Occidente</p>
+                    <p class="year">2024</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-card">
+                    <h3>Técnica por competencias en Diseño Gráfico</h3>
+                    <p class="institution">Politécnico ASDI</p>
+                    <p class="year">2020 - 2021</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-card">
+                    <h3>Comunicadora Social</h3>
+                    <p class="institution">Universidad Católica de Oriente</p>
+                    <p class="year">2014 - 2019</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laura Rosero Chavarriaga | Portafolio</title>
+
+<style>
+/* =========================
+   VARIABLES
+========================= */
+:root{
+    --bg: #f8f6f3;
+    --text: #232323;
+    --primary: #b66a3b;
+    --secondary: #5c6f60;
+    --card: #ffffff;
+    --muted: #6f6f6f;
+    --shadow: 0 15px 35px rgba(0,0,0,.08);
+    --radius: 22px;
+}
+
+/* =========================
+   RESET
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+header{
+    position: sticky;
+    top:0;
+    z-index: 100;
+    background: rgba(255,255,255,.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+.nav{
+    width:min(1200px,90%);
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-weight:800;
+    font-size:1.1rem;
+}
+
+.nav-links{
+    display:flex;
+    gap:24px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--text);
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--primary);
+}
+
+/* =========================
+   HERO
+========================= */
+.hero{
+    width:min(1200px,90%);
+    margin:80px auto;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+    align-items:center;
+}
+
+.hero-content h1{
+    font-size:clamp(2.8rem,5vw,5rem);
+    line-height:1.05;
+    margin-bottom:18px;
+}
+
+.hero-content h2{
+    font-size:1.2rem;
+    color:var(--primary);
+    margin-bottom:24px;
+    font-weight:700;
+}
+
+.hero-content p{
+    color:var(--muted);
+    margin-bottom:16px;
+    font-size:1.05rem;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:16px;
+    margin-top:32px;
+}
+
+.btn{
+    padding:14px 26px;
+    border-radius:999px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:var(--primary);
+    color:white;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:var(--shadow);
+}
+
+.btn-secondary{
+    border:2px solid var(--secondary);
+    color:var(--secondary);
+}
+
+.btn-secondary:hover{
+    background:var(--secondary);
+    color:white;
+}
+
+.hero-image{
+    position:relative;
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    object-fit:cover;
+}
+
+.hero-badge{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    background:white;
+    padding:14px 18px;
+    border-radius:16px;
+    box-shadow:var(--shadow);
+}
+
+.hero-badge strong{
+    display:block;
+    color:var(--primary);
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about{
+    width:min(1200px,90%);
+    margin:120px auto;
+}
+
+.section-header{
+    margin-bottom:50px;
+}
+
+.section-header span{
+    color:var(--primary);
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    font-size:.9rem;
+}
+
+.section-header h3{
+    font-size:2.3rem;
+    margin-top:10px;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.about-card{
+    background:var(--card);
+    padding:34px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.about-card h4{
+    margin-bottom:16px;
+    color:var(--primary);
+    font-size:1.1rem;
+}
+
+.about-card p{
+    color:var(--muted);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:900px){
+
+    .hero{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+}
+</style>
 </head>
 <body>
 
-    <!-- MENÚ DE NAVEGACIÓN -->
-    <header>
-        <nav>
-            <a href="#about">Acerca de mi</a>
+<!-- =========================
+     HEADER
+========================= -->
+<header>
+    <div class="nav">
+        <div class="logo">Laura Rosero</div>
+
+        <nav class="nav-links">
+            <a href="#about">Acerca de mí</a>
             <a href="#education">Educación</a>
-            <a href="#projects">Proyectos destacados</a>
+            <a href="#projects">Proyectos</a>
             <a href="#contact">Contacto</a>
         </nav>
-    </header>
+    </div>
+</header>
 
-    <!-- HERO / PRESENTACIÓN -->
-    <section class="hero">
-        <div class="hero-img">
-            <!-- Marcador de posición para la foto de perfil del wireframe -->
-            <svg viewBox="0 0 100 100" style="background-color: #e2c2c8; border-radius: 20px; width: 100%; height: auto;">
-                <circle cx="50" cy="45" r="20" fill="#b9838f" />
-                <path d="M20 90 C20 70, 80 70, 80 90" fill="#b9838f" />
-            </svg>
+<!-- =========================
+     HERO
+========================= -->
+<section class="hero">
+
+    <div class="hero-content">
+        <h1>Laura Rosero Chavarriaga</h1>
+
+        <h2>Comunicadora Social · Diseñadora Gráfica · Branding & Experiencias de Marca</h2>
+
+        <p>
+            Soy Comunicadora Social y especialista en Diseño Publicitario en Contenidos Digitales.
+            Mi experiencia reúne branding, comunicación institucional y diseño gráfico para
+            empresas privadas e instituciones públicas.
+        </p>
+
+        <p>
+            Actualmente complemento mi perfil con formación en UX/UI, integrando estrategia,
+            creatividad y diseño para construir experiencias centradas en las personas.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">Ver proyectos</a>
+            <a href="#contact" class="btn btn-secondary">Contactar</a>
         </div>
-        <div class="hero-text">
-            <h1>Laura Rosero <span class="apellido">Chavarriaga</span></h1>
-            <h2>Comunicadora Social y Diseñadora Gráfica | Branding, Contenidos Digitales y Experiencias de Marca.</h2>
-        </div>
-    </section>
-
-    <!-- SECCIÓN INFORMACIÓN GENERAL -->
-    <div class="info-section">
-        <!-- ACERCA DE MI -->
-        <section id="about" class="about">
-            <h3>Acerca de mi</h3>
-            <p>Comunicadora Social y especialista en Diseño Publicitario en Contenidos Digitales, con experiencia en branding, comunicación institucional y contenidos digitales. He participado en proyectos de comunicación pública, marca ciudad y posicionamiento de marca, integrando estrategia, creatividad y diseño para fortalecer la conexión entre las organizaciones y sus audiencias. Actualmente complemento mi perfil con formación en UX/UI, ampliando mis capacidades para diseñar experiencias digitales centradas en el usuario.</p>
-        </section>
-
-        <!-- EDUCACIÓN -->
-        <section id="education" class="education">
-            <h3>Educación</h3>
-            
-            <div class="edu-item">
-                <h4>Especialista en Diseño Publicitario en Contenidos Digitales</h4>
-                <p>Universidad Autónoma de Occidente | 2024</p>
-            </div>
-
-            <div class="edu-item">
-                <h4>Técnica por competencias en Diseño Gráfico</h4>
-                <p>Politécnico ASDI | 2020-2021</p>
-            </div>
-
-            <div class="edu-item">
-                <h4>Comunicadora Social</h4>
-                <p>Universidad Católica de Oriente | 2014-2019</p>
-            </div>
-        </section>
     </div>
 
-    <!-- SECCIÓN PROYECTOS DESTACADOS (WIREFRAME ROSA) -->
-    <section id="projects" class="projects-section">
-        <div class="projects-container">
-            <h3>Proyectos destacados</h3>
-            
-            <div class="grid-projects">
-                <!-- Tarjeta 1 -->
-                <div class="card">
-                    <div class="card-image-placeholder">
-                        [ Imagen Cohete / Escenario ]
-                    </div>
-                    <h4>Identidad de marca</h4>
-                </div>
+    <div class="hero-image">
+        <img src="IMG_4942.JPG" alt="Laura Rosero">
 
-                <!-- Tarjeta 2 -->
-                <div class="card">
-                    <div class="card-image-placeholder ux-ui">
-                        <div class="ux-mockup">
-                            <div>Hola, Valentina</div>
-                            <div style="font-size:7px; background:#f5f5f5;">TU HOGAR ESTÁ EN LA ETAPA DE ESTRUCTURA</div>
-                            <div style="height:35px; background:#e8e8e8; margin-top:15px; font-size:8px; padding:10px;">APRENDE SOBRE TU OBRA</div>
-                        </div>
-                    </div>
-                    <h4>Experiencias UX/UI</h4>
-                </div>
-
-                <!-- Tarjeta 3 -->
-                <div class="card">
-                    <div class="card-image-placeholder">
-                        En el pueblito<br><strong>no decimos</strong>
-                    </div>
-                    <h4>Redes Sociales</h4>
-                </div>
-
-                <!-- Tarjeta 4 -->
-                <div class="card">
-                    <div class="card-image-placeholder">
-                        [ Oyate lempar / Experiencia Stand ]
-                    </div>
-                    <h4>Experiencia de Marca</h4>
-                </div>
-            </div>
+        <div class="hero-badge">
+            <strong>UX/UI en formación</strong>
+            Estrategia + Diseño + Experiencia
         </div>
-    </section>
+    </div>
 
-    <!-- SECCIÓN CONTACTO -->
-    <section id="contact" class="contact-section">
-        <h3>Contacto</h3>
-        <br>
-        <p>¿Tienes un proyecto en mente o quieres conocer más sobre mi trabajo?</p>
-        <a href="mailto:tu-correo@email.com" class="btn-contacto">Enviar mensaje</a>
-    </section>
+</section>
 
+<!-- =========================
+     ACERCA DE MÍ
+========================= -->
+<section class="about" id="about">
+
+    <div class="section-header">
+        <span>Acerca de mí</span>
+        <h3>Comunicación, branding y experiencias de marca</h3>
+    </div>
+
+    <div class="about-grid">
+
+        <div class="about-card">
+            <h4>Mi enfoque</h4>
+            <p>
+                Combino comunicación estratégica, diseño gráfico y branding para crear
+                experiencias visuales coherentes, memorables y alineadas con los objetivos
+                de cada organización.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <h4>Lo que construyo</h4>
+            <p>
+                Desarrollo identidades visuales, campañas institucionales, piezas editoriales
+                y contenidos digitales que fortalecen la conexión entre las marcas y las personas.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
+
+</main>
 </body>
 </html>
