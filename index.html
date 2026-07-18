@@ -1,170 +1,359 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Laura Rosero Chavarriaga</title>
+    <style>
+        /* --- ESTILOS GENERALES Y PALETA DE COLORES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    <title>Laura Rosero</title>
+        body {
+            background-color: #fcf8f9; /* Fondo claro general */
+            color: #333333;
+            line-height: 1.6;
+        }
 
-    <link rel="stylesheet" href="css/style.css">
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        /* --- MENÚ DE NAVEGACIÓN --- */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
+        nav a {
+            margin-left: 25px;
+            font-weight: 600;
+            color: #555;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #b9838f;
+        }
+
+        /* --- SECCIÓN PRINCIPAL / HERO --- */
+        .hero {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-img {
+            flex: 1;
+            max-width: 350px;
+        }
+
+        .hero-img img {
+            width: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        .hero-text {
+            flex: 2;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            color: #333;
+            line-height: 1.1;
+            margin-bottom: 5px;
+        }
+
+        .hero-text .apellido {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .hero-text h2 {
+            font-size: 1.3rem;
+            color: #b9838f;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+
+        /* --- ACERCA DE MI Y EDUCACIÓN --- */
+        .info-section {
+            max-width: 1200px;
+            margin: 0 auto 60px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 50px;
+        }
+
+        .about, .education {
+            flex: 1;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #b9838f;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .edu-item {
+            margin-bottom: 20px;
+        }
+
+        .edu-item h4 {
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .edu-item p {
+            color: #777;
+            font-size: 0.95rem;
+        }
+
+        /* --- SECCIÓN PROYECTOS (WIREFRAME DE COLOR) --- */
+        .projects-section {
+            background-color: #b9838f; /* Tono rosa del fondo del wireframe */
+            padding: 60px 20px;
+            color: #ffffff;
+        }
+
+        .projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .projects-section h3 {
+            color: #ffffff;
+            border-bottom-color: #ffffff;
+            margin-bottom: 40px;
+        }
+
+        .grid-projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-image-placeholder {
+            background-color: #55343b; /* Color oscuro simulando las imágenes del wireframe */
+            height: 250px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #dfb2bc;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        /* Simulación de la interfaz UX/UI blanca dentro de la segunda tarjeta */
+        .card-image-placeholder.ux-ui {
+            background-color: #e0e0e0;
+            color: #333;
+            font-size: 0.75rem;
+            font-weight: normal;
+            display: block;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        .ux-mockup {
+            background: white;
+            border-radius: 5px;
+            height: 100%;
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ccc;
+        }
+
+        .ux-mockup div {
+            background: #eee;
+            margin-bottom: 6px;
+            padding: 4px;
+            border-radius: 3px;
+            font-size: 9px;
+            font-weight: bold;
+        }
+
+        .card h4 {
+            margin-top: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* --- SECCIÓN CONTACTO / FOOTER --- */
+        .contact-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .btn-contacto {
+            display: inline-block;
+            background-color: #b9838f;
+            color: white;
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn-contacto:hover {
+            background-color: #9e6773;
+            transform: translateY(-2px);
+        }
+
+        /* --- RESPONSIVE (MÓVILES) --- */
+        @media (max-width: 768px) {
+            nav { justify-content: center; }
+            .hero { flex-direction: column; text-align: center; }
+            .info-section { flex-direction: column; gap: 30px; }
+            .hero-text h1 { font-size: 2.2rem; }
+        }
+    </style>
 </head>
-
 <body>
 
-    <!-- ================= NAV ================= -->
-
+    <!-- MENÚ DE NAVEGACIÓN -->
     <header>
-
         <nav>
-
             <a href="#about">Acerca de mi</a>
             <a href="#education">Educación</a>
-            <a href="#projects">Proyectos</a>
+            <a href="#projects">Proyectos destacados</a>
             <a href="#contact">Contacto</a>
-
         </nav>
-
     </header>
 
-    <!-- ================= HERO ================= -->
-
+    <!-- HERO / PRESENTACIÓN -->
     <section class="hero">
-
-        <div class="hero-image">
-
-            <!-- FOTO PRINCIPAL -->
-            <img src="images/profile.jpg" alt="Laura Rosero">
-
+        <div class="hero-img">
+            <!-- Marcador de posición para la foto de perfil del wireframe -->
+            <svg viewBox="0 0 100 100" style="background-color: #e2c2c8; border-radius: 20px; width: 100%; height: auto;">
+                <circle cx="50" cy="45" r="20" fill="#b9838f" />
+                <path d="M20 90 C20 70, 80 70, 80 90" fill="#b9838f" />
+            </svg>
         </div>
-
         <div class="hero-text">
-
-            <h1>Laura Rosero Chavarriaga</h1>
-
-            <p>
-                Comunicadora Social ·
-                Diseñadora Gráfica ·
-                Branding &
-                Experiencias de Marca
-            </p>
-
+            <h1>Laura Rosero <span class="apellido">Chavarriaga</span></h1>
+            <h2>Comunicadora Social y Diseñadora Gráfica | Branding, Contenidos Digitales y Experiencias de Marca.</h2>
         </div>
-
     </section>
 
-    <!-- ================= ABOUT ================= -->
+    <!-- SECCIÓN INFORMACIÓN GENERAL -->
+    <div class="info-section">
+        <!-- ACERCA DE MI -->
+        <section id="about" class="about">
+            <h3>Acerca de mi</h3>
+            <p>Comunicadora Social y especialista en Diseño Publicitario en Contenidos Digitales, con experiencia en branding, comunicación institucional y contenidos digitales. He participado en proyectos de comunicación pública, marca ciudad y posicionamiento de marca, integrando estrategia, creatividad y diseño para fortalecer la conexión entre las organizaciones y sus audiencias. Actualmente complemento mi perfil con formación en UX/UI, ampliando mis capacidades para diseñar experiencias digitales centradas en el usuario.</p>
+        </section>
 
-    <section id="about" class="about">
+        <!-- EDUCACIÓN -->
+        <section id="education" class="education">
+            <h3>Educación</h3>
+            
+            <div class="edu-item">
+                <h4>Especialista en Diseño Publicitario en Contenidos Digitales</h4>
+                <p>Universidad Autónoma de Occidente | 2024</p>
+            </div>
 
-        <h2>Acerca de mi</h2>
+            <div class="edu-item">
+                <h4>Técnica por competencias en Diseño Gráfico</h4>
+                <p>Politécnico ASDI | 2020-2021</p>
+            </div>
 
-        <p>
-            Soy Comunicadora Social y especialista en Diseño Publicitario en
-            Contenidos Digitales...
-        </p>
+            <div class="edu-item">
+                <h4>Comunicadora Social</h4>
+                <p>Universidad Católica de Oriente | 2014-2019</p>
+            </div>
+        </section>
+    </div>
 
-        <p>
-            Actualmente complemento mi perfil con formación en UX/UI...
-        </p>
+    <!-- SECCIÓN PROYECTOS DESTACADOS (WIREFRAME ROSA) -->
+    <section id="projects" class="projects-section">
+        <div class="projects-container">
+            <h3>Proyectos destacados</h3>
+            
+            <div class="grid-projects">
+                <!-- Tarjeta 1 -->
+                <div class="card">
+                    <div class="card-image-placeholder">
+                        [ Imagen Cohete / Escenario ]
+                    </div>
+                    <h4>Identidad de marca</h4>
+                </div>
 
+                <!-- Tarjeta 2 -->
+                <div class="card">
+                    <div class="card-image-placeholder ux-ui">
+                        <div class="ux-mockup">
+                            <div>Hola, Valentina</div>
+                            <div style="font-size:7px; background:#f5f5f5;">TU HOGAR ESTÁ EN LA ETAPA DE ESTRUCTURA</div>
+                            <div style="height:35px; background:#e8e8e8; margin-top:15px; font-size:8px; padding:10px;">APRENDE SOBRE TU OBRA</div>
+                        </div>
+                    </div>
+                    <h4>Experiencias UX/UI</h4>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="card">
+                    <div class="card-image-placeholder">
+                        En el pueblito<br><strong>no decimos</strong>
+                    </div>
+                    <h4>Redes Sociales</h4>
+                </div>
+
+                <!-- Tarjeta 4 -->
+                <div class="card">
+                    <div class="card-image-placeholder">
+                        [ Oyate lempar / Experiencia Stand ]
+                    </div>
+                    <h4>Experiencia de Marca</h4>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- ================= EDUCATION ================= -->
-
-    <section id="education" class="education">
-
-        <h2>Educación</h2>
-
-        <div class="education-item">
-
-            <h3>Especialista en Diseño Publicitario en Contenidos Digitales</h3>
-
-            <p>Universidad Autónoma de Occidente | 2024</p>
-
-        </div>
-
-        <div class="education-item">
-
-            <h3>Técnica por competencias en Diseño Gráfico</h3>
-
-            <p>Politécnico ASDI | 2020 - 2021</p>
-
-        </div>
-
-        <div class="education-item">
-
-            <h3>Comunicadora Social</h3>
-
-            <p>Universidad Católica de Oriente | 2014 - 2019</p>
-
-        </div>
-
-    </section>
-
-    <!-- ================= PROJECTS ================= -->
-
-    <section id="projects" class="projects">
-
-        <h2>Proyectos destacados</h2>
-
-        <div class="cards">
-
-            <article class="card">
-
-                <!-- Branding -->
-                <img src="images/branding.jpg" alt="">
-                <h3>Branding</h3>
-
-            </article>
-
-            <article class="card">
-
-                <!-- Comunicación -->
-                <img src="images/institucional.jpg" alt="">
-                <h3>Comunicación Institucional</h3>
-
-            </article>
-
-            <article class="card">
-
-                <!-- Contenidos -->
-                <img src="images/contenidos.jpg" alt="">
-                <h3>Contenidos Digitales</h3>
-
-            </article>
-
-            <article class="card">
-
-                <!-- Editorial -->
-                <img src="images/editorial.jpg" alt="">
-                <h3>Diseño Editorial</h3>
-
-            </article>
-
-        </div>
-
-    </section>
-
-    <!-- ================= CONTACT ================= -->
-
-    <section id="contact" class="contact">
-
-        <h2>Contacto</h2>
-
-        <p>Email: laurarosero2@gmail.com</p>
-
-        <p>Instagram: @laurosero</p>
-
-        <a href="mailto:laurarosero2@gmail.com" class="button">
-            Enviar mensaje
-        </a>
-
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contact" class="contact-section">
+        <h3>Contacto</h3>
+        <br>
+        <p>¿Tienes un proyecto en mente o quieres conocer más sobre mi trabajo?</p>
+        <a href="mailto:tu-correo@email.com" class="btn-contacto">Enviar mensaje</a>
     </section>
 
 </body>
-
 </html>
