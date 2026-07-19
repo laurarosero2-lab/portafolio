@@ -1,52 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contacto — Laura Rosero Chavarriaga</title>
-<meta name="description" content="Escríbele a Laura Rosero Chavarriaga para tu próximo proyecto de diseño gráfico y comunicación.">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-<header class="site-header">
-  <div class="wrap nav">
-    <a href="index.html" class="logo">Laura Rosero ✦</a>
-    <ul class="nav-links">
-      <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
-      <li><a href="about.html" data-i18n="nav_about">Sobre mí</a></li>
-      <li><a href="portfolio.html" data-i18n="nav_portfolio">Portafolio</a></li>
-      <li><a href="contact.html" class="active" data-i18n="nav_contact">Contacto</a></li>
-    </ul>
-    <div class="nav-right">
-      <div class="lang-toggle">
-        <button data-lang="es">ES</button>
-        <button data-lang="en">EN</button>
-      </div>
-      <a href="contact.html" class="nav-cta" data-i18n="nav_cta">Escríbeme</a>
-      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
-    </div>
-  </div>
-</header>
-
-<section style="background:var(--pink); padding-bottom:50px;">
-  <div class="wrap" style="padding-top:20px;">
-    <p class="eyebrow" data-i18n="contact_eyebrow">Contacto</p>
-    <h1 style="font-family:var(--font-display); font-weight:700; font-size:clamp(2.4rem,5vw,4rem); margin:10px 0 16px;" data-i18n="contact_title">Hablemos de tu<br>próximo proyecto.</h1>
-    <p class="lede" data-i18n="contact_desc">Cuéntame qué estás construyendo. Respondo en 1–2 días hábiles.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap contact-grid">
-    <div>
+<div>
       <div class="contact-card">
         <p class="label" data-i18n="contact_email_label">Correo</p>
         <p class="value"><a href="mailto:laurarosero2@gmail.com">laurarosero2@gmail.com</a></p>
-      </div>
-      <div class="contact-card">
-        <p class="label" data-i18n="contact_phone_label">Teléfono / WhatsApp</p>
-        <p class="value"><a href="https://wa.me/573136318199" target="_blank" rel="noopener">+57 313 631 8199</a></p>
       </div>
       <div class="contact-card">
         <p class="label" data-i18n="contact_location_label">Ubicación</p>
@@ -57,53 +12,3 @@
         <p class="value"><a href="#" target="_blank" rel="noopener">Perfil de Behance</a></p>
       </div>
     </div>
-
-    <div>
-      <form class="contact-form">
-        <div class="field">
-          <label for="name" data-i18n="form_name">Nombre</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="field">
-          <label for="email" data-i18n="form_email">Correo electrónico</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="field">
-          <label for="message" data-i18n="form_message">Cuéntame sobre tu proyecto</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" data-i18n="form_submit" style="align-self:flex-start;">Enviar mensaje</button>
-        <p class="form-note" data-i18n="form_note">Este formulario abre tu cliente de correo con el mensaje listo para enviar.</p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <p class="footer-name">Laura Rosero ✦</p>
-        <p data-i18n="footer_tagline" style="color:var(--charcoal-soft); margin-top:6px;">Diseño gráfico + comunicación estratégica.</p>
-      </div>
-      <ul class="footer-links">
-        <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
-        <li><a href="about.html" data-i18n="nav_about">Sobre mí</a></li>
-        <li><a href="portfolio.html" data-i18n="nav_portfolio">Portafolio</a></li>
-        <li><a href="contact.html" data-i18n="nav_contact">Contacto</a></li>
-      </ul>
-      <div class="footer-social">
-        <a class="social-pill" href="mailto:laurarosero2@gmail.com" aria-label="Email">@</a>
-        <a class="social-pill" href="#" aria-label="Behance">Be</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Laura Rosero Chavarriaga — <span data-i18n="footer_rights">Todos los derechos reservados.</span></span>
-      <span>Rionegro, Antioquia, Colombia</span>
-    </div>
-  </div>
-</footer>
-
-<script src="i18n.js"></script>
-</body>
-</html>
