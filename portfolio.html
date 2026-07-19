@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio — Laura Rosero Chavarriaga</title>
+<meta name="description" content="Portafolio de proyectos de identidad de marca, diseño editorial, contenido digital e ilustración de Laura Rosero Chavarriaga.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.html" class="logo">Laura Rosero ✦</a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+      <li><a href="about.html" data-i18n="nav_about">Sobre mí</a></li>
+      <li><a href="portfolio.html" class="active" data-i18n="nav_portfolio">Portafolio</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contacto</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button data-lang="es">ES</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="contact.html" class="nav-cta" data-i18n="nav_cta">Escríbeme</a>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section style="background:var(--pink); padding-bottom:50px;">
+  <div class="wrap" style="padding-top:20px;">
+    <p class="eyebrow" data-i18n="port_eyebrow">Portafolio</p>
+    <h1 style="font-family:var(--font-display); font-weight:700; font-size:clamp(2.4rem,5vw,4rem); margin:10px 0 16px;" data-i18n="port_title">Proyectos.</h1>
+    <p class="lede" data-i18n="port_desc" style="max-width:56ch;">Identidad de marca, diseño editorial, contenido para redes e ilustración — organizado por categoría.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="filter-row">
+      <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Todos</button>
+      <button class="filter-btn" data-filter="brand" data-i18n="filter_brand">Identidad de marca</button>
+      <button class="filter-btn" data-filter="editorial" data-i18n="filter_editorial">Diseño editorial</button>
+      <button class="filter-btn" data-filter="social" data-i18n="filter_social">Contenido digital</button>
+      <button class="filter-btn" data-filter="illustration" data-i18n="filter_illustration">Ilustración</button>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <div class="portfolio-card" id="tierra-querida" data-cat="brand">
+        <div class="thumb"><img src="images/tierraquerida-identity.jpg" alt="Tierra Querida — construcción de marca"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_brand">Identidad de marca</p>
+          <h3>Tierra Querida</h3>
+          <p>Evolución de la identidad visual de la cadena de hamburgueserías: logotipo, línea gráfica de aniversario y aplicaciones de marca.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="social">
+        <div class="thumb"><img src="images/tierraquerida-campaign.jpg" alt="Tierra Querida — campaña 5 años"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_social">Contenido digital</p>
+          <h3>Tierra Querida — Campaña 5 años</h3>
+          <p>Línea gráfica para el aniversario de la marca: piezas para redes sociales y términos de la promoción.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" id="awakening-bliss" data-cat="brand">
+        <div class="thumb"><img src="images/awakening-logo.jpg" alt="Awakening Bliss — logotipo"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_brand">Identidad de marca</p>
+          <h3>Awakening Bliss</h3>
+          <p>Identidad de marca para un spa de bienestar holístico: logotipo, paleta y aplicaciones corporativas.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="social">
+        <div class="thumb"><img src="images/awakening-services.jpg" alt="Awakening Bliss — portafolio de servicios"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_social">Contenido digital</p>
+          <h3>Awakening Bliss — Servicios</h3>
+          <p>Diseño del portafolio de servicios y piezas fotográficas para promoción de tratamientos.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" id="palacio" data-cat="brand">
+        <div class="thumb"><img src="images/palacio-identity.jpg" alt="El Palacio de los Fríjoles — línea gráfica 40 años"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_brand">Identidad de marca</p>
+          <h3>El Palacio de los Fríjoles</h3>
+          <p>Línea gráfica conmemorativa de los 40 años de la marca, aplicada a vallas y publicidad exterior.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" id="rpac" data-cat="brand">
+        <div class="thumb"><img src="images/rpac-identity.jpg" alt="RPAC — moodboard de identidad de marca"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_brand">Identidad de marca</p>
+          <h3>Red de Prácticas Artísticas — Alcaldía de Medellín</h3>
+          <p>Exploración de línea gráfica para la Red de Prácticas Artísticas y Culturales de Medellín.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="social">
+        <div class="thumb"><img src="images/rpac-social.jpg" alt="RPAC — contenido para redes sociales"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_social">Contenido digital</p>
+          <h3>RPAC — Redes sociales</h3>
+          <p>Piezas de contenido institucional para Instagram sobre la Red de Prácticas Artísticas y Culturales.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" id="editorial" data-cat="editorial">
+        <div class="thumb"><img src="images/editorial-red.jpg" alt="Diseño editorial — revistas Red de Medellín"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_editorial">Diseño editorial</p>
+          <h3>Revistas anuales — Red de Medellín</h3>
+          <p>Diagramación de publicaciones editoriales institucionales para las Redes de Danza, Artes Plásticas y Músicas de Medellín.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" id="unrespiro" data-cat="brand">
+        <div class="thumb"><img src="images/unrespiro-identity.jpg" alt="Unrespiro — identidad de marca"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_brand">Identidad de marca</p>
+          <h3>Unrespiro — Espacio Creativo</h3>
+          <p>Identidad de marca para un taller de bordado artesanal: logotipo, materiales y aplicaciones corporativas.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="social">
+        <div class="thumb"><img src="images/unrespiro-social.jpg" alt="Unrespiro — contenido para redes sociales"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_social">Contenido digital</p>
+          <h3>Unrespiro — Redes sociales</h3>
+          <p>Contenido de Instagram y fotografía de producto para piezas de bordado hechas a mano.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="brand">
+        <div class="thumb"><img src="images/alaya-social.jpg" alt="Alaya Equus — identidad de marca"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_brand">Identidad de marca</p>
+          <h3>Alaya Equus — Escuela de Equitación</h3>
+          <p>Piezas de comunicación y contenido de marca para una escuela de equitación.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" id="illustration" data-cat="illustration">
+        <div class="thumb"><img src="images/illustration-rpac.jpg" alt="Serie de ilustración — Red de Prácticas Artísticas"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_illustration">Ilustración</p>
+          <h3>Serie ilustrada — RPAC</h3>
+          <p>Ilustraciones originales para anunciar la llegada de la Red de Prácticas Artísticas a Medellín.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-cat="illustration">
+        <div class="thumb"><img src="images/illustration-tiempos.jpg" alt="Ilustración — Tiempos de Imaginar"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_illustration">Ilustración</p>
+          <h3>Tiempos de Imaginar</h3>
+          <p>Ilustración de personaje e identidad gráfica para un programa de formación artística infantil.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2 data-i18n="cta_band_title">¿Tienes un proyecto en mente?</h2>
+      <a href="contact.html" class="btn btn-primary" data-i18n="cta_band_btn">Conversemos</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-name">Laura Rosero ✦</p>
+        <p data-i18n="footer_tagline" style="color:var(--charcoal-soft); margin-top:6px;">Diseño gráfico + comunicación estratégica.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+        <li><a href="about.html" data-i18n="nav_about">Sobre mí</a></li>
+        <li><a href="portfolio.html" data-i18n="nav_portfolio">Portafolio</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">Contacto</a></li>
+      </ul>
+      <div class="footer-social">
+        <a class="social-pill" href="mailto:laurarosero2@gmail.com" aria-label="Email">@</a>
+        <a class="social-pill" href="#" aria-label="Behance">Be</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Laura Rosero Chavarriaga — <span data-i18n="footer_rights">Todos los derechos reservados.</span></span>
+      <span>Rionegro, Antioquia, Colombia</span>
+    </div>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+</body>
+</html>
