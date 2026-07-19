@@ -85,12 +85,43 @@ const STRINGS = {
 
     port_eyebrow: "Portafolio",
     port_title: "Proyectos.",
-    port_desc: "Identidad de marca, diseño editorial, contenido para redes e ilustración — organizado por categoría.",
-    filter_all: "Todos",
-    filter_brand: "Identidad de marca",
+    port_desc: "Trabajo organizado por empresa: identidad de marca, contenido digital y aplicaciones para cada cliente.",
     filter_editorial: "Diseño editorial",
-    filter_social: "Contenido digital",
-    filter_illustration: "Ilustración",
+
+    tag_identity: "Identidad de marca",
+    tag_applications: "Aplicaciones corporativas",
+    tag_social: "Contenido digital",
+    tag_illustration: "Ilustración",
+
+    client_tierra_desc: "Cadena de hamburgueserías. Evolución de identidad visual, aplicaciones corporativas y contenido para redes en varias aperturas y campañas.",
+    tierra_1_title: "Logotipo y manual de marca",
+    tierra_2_title: "Vallas, vehículos y carné",
+    tierra_3_title: "Piezas para nuevas sedes",
+    tierra_4_title: "Campaña aniversario 5 años",
+
+    client_alaya_desc: "Escuela de equitación. Piezas de comunicación para clases, eventos y contenido de marca.",
+    alaya_1_title: "Clases y jornadas de equitación",
+    alaya_2_title: "Aperturas y bonos regalo",
+
+    rpac_title: "Red de Prácticas Artísticas y Culturales",
+    client_rpac_desc: "Alcaldía de Medellín. Identidad, aplicaciones corporativas, contenido digital e ilustración para el programa Nos Mueve la Cultura.",
+    rpac_1_title: "Exploración de línea gráfica",
+    rpac_2_title: "Cuaderno, paraguas y merchandising",
+    rpac_3_title: "Piezas para Instagram",
+    rpac_4_title: "Registro e historias de la Red",
+    rpac_5_title: "Serie ilustrada — llegada a Medellín",
+    rpac_6_title: "Tiempos de Imaginar",
+
+    client_unrespiro_desc: "Taller de bordado artesanal. Identidad de marca, materiales y contenido de producto.",
+    unrespiro_1_title: "Logotipo y aplicaciones",
+    unrespiro_2_title: "Producto y redes sociales",
+
+    client_palacio_desc: "Restaurante con 40 años de trayectoria. Línea gráfica conmemorativa para publicidad exterior.",
+    palacio_1_title: "Campaña 40 años",
+
+    editorial_title: "Revistas anuales — Red de Medellín",
+    client_editorial_desc: "Diagramación de publicaciones institucionales para las Redes de Danza, Artes Plásticas y Músicas de la Alcaldía de Medellín.",
+    editorial_1_title: "Diagramación de revistas anuales",
 
     contact_eyebrow: "Contacto",
     contact_title: "Hablemos de tu\npróximo proyecto.",
@@ -190,12 +221,43 @@ const STRINGS = {
 
     port_eyebrow: "Portfolio",
     port_title: "Projects.",
-    port_desc: "Brand identity, editorial design, digital content and illustration — organized by category.",
-    filter_all: "All",
-    filter_brand: "Brand identity",
+    port_desc: "Work organized by client: brand identity, digital content and applications for each company.",
     filter_editorial: "Editorial design",
-    filter_social: "Digital content",
-    filter_illustration: "Illustration",
+
+    tag_identity: "Brand identity",
+    tag_applications: "Corporate applications",
+    tag_social: "Digital content",
+    tag_illustration: "Illustration",
+
+    client_tierra_desc: "Burger restaurant chain. Visual identity evolution, corporate applications and social content across several openings and campaigns.",
+    tierra_1_title: "Logo and brand manual",
+    tierra_2_title: "Billboards, vehicles and ID badge",
+    tierra_3_title: "New-location content",
+    tierra_4_title: "5th anniversary campaign",
+
+    client_alaya_desc: "Riding school. Communication pieces for classes, events and brand content.",
+    alaya_1_title: "Riding classes and clinics",
+    alaya_2_title: "Openings and gift vouchers",
+
+    rpac_title: "Network of Artistic and Cultural Practices",
+    client_rpac_desc: "City of Medellín. Identity, corporate applications, digital content and illustration for the Nos Mueve la Cultura program.",
+    rpac_1_title: "Visual identity exploration",
+    rpac_2_title: "Notebook, umbrella and merch",
+    rpac_3_title: "Instagram content",
+    rpac_4_title: "Field photography and stories",
+    rpac_5_title: "Illustrated series — arrival in Medellín",
+    rpac_6_title: "Tiempos de Imaginar",
+
+    client_unrespiro_desc: "Handmade embroidery workshop. Brand identity, materials and product content.",
+    unrespiro_1_title: "Logo and applications",
+    unrespiro_2_title: "Product and social content",
+
+    client_palacio_desc: "40-year-old restaurant. Commemorative visual line for outdoor advertising.",
+    palacio_1_title: "40th anniversary campaign",
+
+    editorial_title: "Annual magazines — Red de Medellín",
+    client_editorial_desc: "Layout for institutional publications for the Dance, Visual Arts and Music Networks of the City of Medellín.",
+    editorial_1_title: "Annual magazine layout",
 
     contact_eyebrow: "Contact",
     contact_title: "Let's talk about your\nnext project.",
@@ -251,22 +313,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (burger && links){
     burger.addEventListener('click', () => links.classList.toggle('open'));
     links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
-  }
-
-  // portfolio filters (only present on portfolio.html)
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('.portfolio-card');
-  if (filterBtns.length){
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const cat = btn.getAttribute('data-filter');
-        cards.forEach(card => {
-          card.classList.toggle('hidden', cat !== 'all' && card.getAttribute('data-cat') !== cat);
-        });
-      });
-    });
   }
 
   // contact form -> mailto
