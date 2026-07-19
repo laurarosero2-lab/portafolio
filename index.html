@@ -1,285 +1,185 @@
-/* ===========================================================
-   Laura Rosero — i18n + shared behaviour
-   All copy lives here so every page can switch ES <-> EN.
-   =========================================================== */
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laura Rosero Chavarriaga — Diseño gráfico &amp; comunicación</title>
+<meta name="description" content="Portafolio de Laura Rosero Chavarriaga: diseñadora gráfica y comunicadora social especializada en identidad de marca, diseño editorial y contenido digital.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-const STRINGS = {
-  es: {
-    nav_home: "Inicio",
-    nav_about: "Sobre mí",
-    nav_portfolio: "Portafolio",
-    nav_contact: "Contacto",
-    nav_cta: "Escríbeme",
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.html" class="logo">Laura Rosero ✦</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active" data-i18n="nav_home">Inicio</a></li>
+      <li><a href="about.html" data-i18n="nav_about">Sobre mí</a></li>
+      <li><a href="portfolio.html" data-i18n="nav_portfolio">Portafolio</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contacto</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button data-lang="es">ES</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="contact.html" class="nav-cta" data-i18n="nav_cta">Escríbeme</a>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
 
-    hero_eyebrow: "Diseño + comunicación",
-    hero_title: "Marca con estrategia,\ndiseño con alma.",
-    hero_lede: "Soy Laura Rosero, comunicadora social y diseñadora gráfica. Construyo identidades de marca, piezas editoriales y contenido digital que conectan organizaciones con las personas que quieren alcanzar.",
-    hero_btn_work: "Ver portafolio",
-    hero_btn_contact: "Hablemos",
-    hero_tag: "Rionegro, Antioquia\nDisponible para proyectos",
-    services_strip: "Branding · Diseño editorial · Contenido digital · Comunicación institucional · UX/UI",
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow" data-i18n="hero_eyebrow">Diseño + comunicación</p>
+        <h1 data-i18n="hero_title">Laura Rosero<br>Chavarriaga</h1>
+        <p class="lede" data-i18n="hero_lede">Diseñadora gráfica y comunicadora social. Identidad de marca, diseño editorial y contenido digital.</p>
+        <div class="hero-actions">
+          <a href="portfolio.html" class="btn btn-primary" data-i18n="hero_btn_work">Ver portafolio</a>
+          <a href="contact.html" class="btn btn-ghost" data-i18n="hero_btn_contact">Hablemos</a>
+        </div>
+        <p class="services-strip" data-i18n="services_strip">Branding · Diseño editorial · Contenido digital · Comunicación institucional · UX/UI</p>
+      </div>
+      <div class="hero-photo">
+        <img src="images/laura-portrait.jpg" alt="Laura Rosero Chavarriaga">
+        <div class="hero-tag" data-i18n="hero_tag">Rionegro, Antioquia<br>Disponible para proyectos</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    work_eyebrow: "Trabajo seleccionado",
-    work_title: "Proyectos recientes.",
-    work_desc: "Una muestra de identidades de marca, campañas y piezas editoriales que he desarrollado para empresas, entidades públicas y emprendimientos.",
-    work_view_all: "Ver todo el portafolio →",
+<section id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow" data-i18n="work_eyebrow">Trabajo seleccionado</p>
+        <h2 class="section-title" data-i18n="work_title">Proyectos recientes.</h2>
+      </div>
+      <p class="section-desc" data-i18n="work_desc">Una muestra de identidades de marca, campañas y piezas editoriales que he desarrollado para empresas, entidades públicas y emprendimientos.</p>
+    </div>
 
-    method_eyebrow: "Cómo trabajo",
-    method_title: "El método.",
-    method_desc: "Diseño acompañado de estrategia, para marcas que quieren crecer con coherencia.",
-    method_1_title: "Estratégico.",
-    method_1_desc: "Cada pieza responde a un objetivo de marca, no solo a una tendencia visual.",
-    method_2_title: "Cercano y claro.",
-    method_2_desc: "Comunico ideas complejas de forma simple, tanto en el diseño como en el texto.",
-    method_3_title: "Centrado en las personas.",
-    method_3_desc: "Integro diseño, comunicación y experiencia de usuario alrededor de quien recibe el mensaje.",
-    method_4_title: "De punta a punta.",
-    method_4_desc: "Desde el concepto de marca hasta la pieza final lista para imprimir o publicar.",
+    <div class="work-grid">
+      <a class="work-card" href="portfolio.html#tierra-querida">
+        <div class="thumb"><img src="images/tierraquerida-identity.jpg" alt="Tierra Querida — identidad de marca"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_brand">Identidad de marca</p>
+          <h3>Tierra Querida</h3>
+        </div>
+      </a>
+      <a class="work-card" href="portfolio.html#awakening-bliss">
+        <div class="thumb"><img src="images/awakening-logo.jpg" alt="Awakening Bliss — identidad de marca"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_brand">Identidad de marca</p>
+          <h3>Awakening Bliss</h3>
+        </div>
+      </a>
+      <a class="work-card" href="portfolio.html#rpac">
+        <div class="thumb"><img src="images/rpac-identity.jpg" alt="RPAC — identidad de marca"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_brand">Identidad de marca</p>
+          <h3>RPAC · Alcaldía de Medellín</h3>
+        </div>
+      </a>
+      <a class="work-card" href="portfolio.html#editorial">
+        <div class="thumb"><img src="images/editorial-red.jpg" alt="Diseño editorial — revistas Red de Medellín"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_editorial">Diseño editorial</p>
+          <h3>Revistas Red de Medellín</h3>
+        </div>
+      </a>
+      <a class="work-card" href="portfolio.html#unrespiro">
+        <div class="thumb"><img src="images/unrespiro-identity.jpg" alt="Unrespiro — identidad de marca"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_brand">Identidad de marca</p>
+          <h3>Unrespiro</h3>
+        </div>
+      </a>
+      <a class="work-card" href="portfolio.html#illustration">
+        <div class="thumb"><img src="images/illustration-tiempos.jpg" alt="Ilustración — Tiempos de Imaginar"></div>
+        <div class="meta">
+          <p class="cat" data-i18n="filter_illustration">Ilustración</p>
+          <h3>Tiempos de Imaginar</h3>
+        </div>
+      </a>
+    </div>
 
-    cta_band_title: "¿Tienes un proyecto en mente?",
-    cta_band_btn: "Conversemos",
+    <p style="text-align:right; margin-top:30px;">
+      <a href="portfolio.html" class="btn btn-ghost" data-i18n="work_view_all">Ver todo el portafolio →</a>
+    </p>
+  </div>
+</section>
 
-    about_eyebrow: "Sobre mí",
-    about_title: "Laura Rosero\nChavarriaga",
-    about_p1: "Diseñadora gráfica creativa con más de 4 años de experiencia en el fortalecimiento de la identidad visual de marcas. Me destaco en la creación de contenido estratégico para redes sociales y campañas, tanto digitales como impresas.",
-    about_p2: "He participado en proyectos de comunicación pública, marca ciudad y posicionamiento de marca, integrando estrategia, creatividad y diseño para fortalecer la conexión entre las organizaciones y sus audiencias.",
-    about_p3: "Actualmente complemento mi perfil con formación en UX/UI, ampliando mis capacidades para diseñar experiencias digitales centradas en el usuario.",
-    about_location: "📍 Rionegro / Medellín, Colombia",
+<section class="method">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow" data-i18n="method_eyebrow" style="color:#f4d9db">Cómo trabajo</p>
+        <h2 class="section-title" data-i18n="method_title">El método.</h2>
+      </div>
+      <p class="section-desc" data-i18n="method_desc">Diseño acompañado de estrategia, para marcas que quieren crecer con coherencia.</p>
+    </div>
 
-    edu_title: "Educación",
-    edu_1_when: "2024",
-    edu_1_title: "Especialista en Diseño Publicitario en Contenidos Digitales",
-    edu_1_where: "Universidad Autónoma de Occidente",
-    edu_2_when: "2014 – 2019",
-    edu_2_title: "Comunicadora Social",
-    edu_2_where: "Universidad Católica de Oriente",
-    edu_3_when: "2026",
-    edu_3_title: "Diplomado en Diseño de Experiencias UX/UI",
-    edu_3_where: "Universidad Pontificia Bolivariana",
-    edu_4_when: "2020 – 2021",
-    edu_4_title: "Técnica por Competencias en Diseño Gráfico",
-    edu_4_where: "Politécnico ASDI",
+    <div class="method-list">
+      <div class="method-item">
+        <span class="num">01</span>
+        <h4 data-i18n="method_1_title">Estratégico.</h4>
+        <p data-i18n="method_1_desc">Cada pieza responde a un objetivo de marca, no solo a una tendencia visual.</p>
+      </div>
+      <div class="method-item">
+        <span class="num">02</span>
+        <h4 data-i18n="method_2_title">Cercano y claro.</h4>
+        <p data-i18n="method_2_desc">Comunico ideas complejas de forma simple, tanto en el diseño como en el texto.</p>
+      </div>
+      <div class="method-item">
+        <span class="num">03</span>
+        <h4 data-i18n="method_3_title">Centrado en las personas.</h4>
+        <p data-i18n="method_3_desc">Integro diseño, comunicación y experiencia de usuario alrededor de quien recibe el mensaje.</p>
+      </div>
+      <div class="method-item">
+        <span class="num">04</span>
+        <h4 data-i18n="method_4_title">De punta a punta.</h4>
+        <p data-i18n="method_4_desc">Desde el concepto de marca hasta la pieza final lista para imprimir o publicar.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    exp_title: "Experiencia",
-    exp_1_when: "Oct. 2025 — Presente",
-    exp_1_title: "Diseñadora Gráfica Independiente",
-    exp_1_where: "Profesional independiente",
-    exp_2_when: "Jun. 2024 — Oct. 2025",
-    exp_2_title: "Diseñadora Gráfica",
-    exp_2_where: "Tierra Querida S.A.S.",
-    exp_3_when: "Jul. 2024 — Dic. 2024",
-    exp_3_title: "Comunicadora Social",
-    exp_3_where: "Alcaldía de Rionegro",
-    exp_4_when: "Oct. 2022 — Dic. 2023",
-    exp_4_title: "Diseñadora Gráfica",
-    exp_4_where: "Alcaldía de Medellín",
-    exp_5_when: "Feb. 2022 — Oct. 2022",
-    exp_5_title: "Community Manager",
-    exp_5_where: "Calzado Cosmos",
-    exp_6_when: "Ene. 2021 — Jul. 2021",
-    exp_6_title: "Aprendiz en Diseño Gráfico",
-    exp_6_where: "Calcetines Crystal",
+<section>
+  <div class="wrap">
+    <div class="cta-band">
+      <h2 data-i18n="cta_band_title">¿Tienes un proyecto en mente?</h2>
+      <a href="contact.html" class="btn btn-primary" data-i18n="cta_band_btn">Conversemos</a>
+    </div>
+  </div>
+</section>
 
-    tools_title: "Herramientas",
-    tools_desc: "El software con el que trabajo día a día.",
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-name">Laura Rosero ✦</p>
+        <p data-i18n="footer_tagline" style="color:var(--charcoal-soft); margin-top:6px;">Diseño gráfico + comunicación estratégica.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+        <li><a href="about.html" data-i18n="nav_about">Sobre mí</a></li>
+        <li><a href="portfolio.html" data-i18n="nav_portfolio">Portafolio</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">Contacto</a></li>
+      </ul>
+      <div class="footer-social">
+        <a class="social-pill" href="mailto:laurarosero2@gmail.com" aria-label="Email">@</a>
+        <a class="social-pill" href="#" aria-label="Behance">Be</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Laura Rosero Chavarriaga — <span data-i18n="footer_rights">Todos los derechos reservados.</span></span>
+      <span>Rionegro, Antioquia, Colombia</span>
+    </div>
+  </div>
+</footer>
 
-    port_eyebrow: "Portafolio",
-    port_title: "Proyectos.",
-    port_desc: "Identidad de marca, diseño editorial, contenido para redes e ilustración — organizado por categoría.",
-    filter_all: "Todos",
-    filter_brand: "Identidad de marca",
-    filter_editorial: "Diseño editorial",
-    filter_social: "Contenido digital",
-    filter_illustration: "Ilustración",
-
-    contact_eyebrow: "Contacto",
-    contact_title: "Hablemos de tu\npróximo proyecto.",
-    contact_desc: "Cuéntame qué estás construyendo. Respondo en 1–2 días hábiles.",
-    contact_email_label: "Correo",
-    contact_phone_label: "Teléfono / WhatsApp",
-    contact_location_label: "Ubicación",
-    contact_behance_label: "Behance",
-    form_name: "Nombre",
-    form_email: "Correo electrónico",
-    form_message: "Cuéntame sobre tu proyecto",
-    form_submit: "Enviar mensaje",
-    form_note: "Este formulario abre tu cliente de correo con el mensaje listo para enviar.",
-
-    footer_tagline: "Diseño gráfico + comunicación estratégica.",
-    footer_rights: "Todos los derechos reservados.",
-  },
-
-  en: {
-    nav_home: "Home",
-    nav_about: "About",
-    nav_portfolio: "Portfolio",
-    nav_contact: "Contact",
-    nav_cta: "Get in touch",
-
-    hero_eyebrow: "Design + communication",
-    hero_title: "Brands with strategy,\ndesign with soul.",
-    hero_lede: "I'm Laura Rosero, a social communicator and graphic designer. I build brand identities, editorial pieces and digital content that connect organizations with the people they want to reach.",
-    hero_btn_work: "View portfolio",
-    hero_btn_contact: "Let's talk",
-    hero_tag: "Rionegro, Antioquia\nAvailable for projects",
-    services_strip: "Branding · Editorial design · Digital content · Institutional communication · UX/UI",
-
-    work_eyebrow: "Selected work",
-    work_title: "Recent projects.",
-    work_desc: "A sample of brand identities, campaigns and editorial pieces developed for companies, public institutions and small businesses.",
-    work_view_all: "See full portfolio →",
-
-    method_eyebrow: "How I work",
-    method_title: "The method.",
-    method_desc: "Design backed by strategy, for brands that want to grow with consistency.",
-    method_1_title: "Strategic.",
-    method_1_desc: "Every piece answers to a brand goal, not just a visual trend.",
-    method_2_title: "Clear and approachable.",
-    method_2_desc: "I communicate complex ideas simply, in both design and copy.",
-    method_3_title: "People-centered.",
-    method_3_desc: "I bring design, communication and user experience together around who receives the message.",
-    method_4_title: "End to end.",
-    method_4_desc: "From brand concept to the final file, ready to print or publish.",
-
-    cta_band_title: "Have a project in mind?",
-    cta_band_btn: "Let's talk",
-
-    about_eyebrow: "About me",
-    about_title: "Laura Rosero\nChavarriaga",
-    about_p1: "Creative graphic designer with 4+ years of experience strengthening brands' visual identity. I specialize in strategic content for social media and campaigns, both digital and print.",
-    about_p2: "I've worked on public communication, city-branding and brand positioning projects, blending strategy, creativity and design to strengthen the connection between organizations and their audiences.",
-    about_p3: "I'm currently complementing my profile with UX/UI training, expanding my ability to design user-centered digital experiences.",
-    about_location: "📍 Rionegro / Medellín, Colombia",
-
-    edu_title: "Education",
-    edu_1_when: "2024",
-    edu_1_title: "Specialization in Advertising Design for Digital Content",
-    edu_1_where: "Universidad Autónoma de Occidente",
-    edu_2_when: "2014 – 2019",
-    edu_2_title: "Social Communicator",
-    edu_2_where: "Universidad Católica de Oriente",
-    edu_3_when: "2026",
-    edu_3_title: "Diploma in UX/UI Experience Design",
-    edu_3_where: "Universidad Pontificia Bolivariana",
-    edu_4_when: "2020 – 2021",
-    edu_4_title: "Technical Certificate in Graphic Design",
-    edu_4_where: "Politécnico ASDI",
-
-    exp_title: "Experience",
-    exp_1_when: "Oct 2025 — Present",
-    exp_1_title: "Independent Graphic Designer",
-    exp_1_where: "Self-employed",
-    exp_2_when: "Jun 2024 — Oct 2025",
-    exp_2_title: "Graphic Designer",
-    exp_2_where: "Tierra Querida S.A.S.",
-    exp_3_when: "Jul 2024 — Dec 2024",
-    exp_3_title: "Social Communicator",
-    exp_3_where: "Municipality of Rionegro",
-    exp_4_when: "Oct 2022 — Dec 2023",
-    exp_4_title: "Graphic Designer",
-    exp_4_where: "Municipality of Medellín",
-    exp_5_when: "Feb 2022 — Oct 2022",
-    exp_5_title: "Community Manager",
-    exp_5_where: "Calzado Cosmos",
-    exp_6_when: "Jan 2021 — Jul 2021",
-    exp_6_title: "Graphic Design Apprentice",
-    exp_6_where: "Calcetines Crystal",
-
-    tools_title: "Tools",
-    tools_desc: "The software I work with every day.",
-
-    port_eyebrow: "Portfolio",
-    port_title: "Projects.",
-    port_desc: "Brand identity, editorial design, digital content and illustration — organized by category.",
-    filter_all: "All",
-    filter_brand: "Brand identity",
-    filter_editorial: "Editorial design",
-    filter_social: "Digital content",
-    filter_illustration: "Illustration",
-
-    contact_eyebrow: "Contact",
-    contact_title: "Let's talk about your\nnext project.",
-    contact_desc: "Tell me what you're building. I reply within 1–2 business days.",
-    contact_email_label: "Email",
-    contact_phone_label: "Phone / WhatsApp",
-    contact_location_label: "Location",
-    contact_behance_label: "Behance",
-    form_name: "Name",
-    form_email: "Email",
-    form_message: "Tell me about your project",
-    form_submit: "Send message",
-    form_note: "This form opens your email client with the message ready to send.",
-
-    footer_tagline: "Graphic design + strategic communication.",
-    footer_rights: "All rights reserved.",
-  }
-};
-
-function getLang(){
-  return localStorage.getItem('lrc_lang') || 'es';
-}
-
-function applyTranslations(lang){
-  const dict = STRINGS[lang];
-  document.documentElement.setAttribute('lang', lang === 'es' ? 'es' : 'en');
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (dict[key] !== undefined){
-      el.innerHTML = dict[key].replace(/\n/g, '<br>');
-    }
-  });
-  document.querySelectorAll('.lang-toggle button').forEach(btn => {
-    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
-  });
-}
-
-function setLang(lang){
-  localStorage.setItem('lrc_lang', lang);
-  applyTranslations(lang);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const lang = getLang();
-  applyTranslations(lang);
-
-  document.querySelectorAll('.lang-toggle button').forEach(btn => {
-    btn.addEventListener('click', () => setLang(btn.getAttribute('data-lang')));
-  });
-
-  const burger = document.querySelector('.burger');
-  const links = document.querySelector('.nav-links');
-  if (burger && links){
-    burger.addEventListener('click', () => links.classList.toggle('open'));
-    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
-  }
-
-  // portfolio filters (only present on portfolio.html)
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('.portfolio-card');
-  if (filterBtns.length){
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const cat = btn.getAttribute('data-filter');
-        cards.forEach(card => {
-          card.classList.toggle('hidden', cat !== 'all' && card.getAttribute('data-cat') !== cat);
-        });
-      });
-    });
-  }
-
-  // contact form -> mailto
-  const form = document.querySelector('.contact-form');
-  if (form){
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = form.querySelector('#name').value;
-      const email = form.querySelector('#email').value;
-      const message = form.querySelector('#message').value;
-      const subject = encodeURIComponent(`Proyecto — ${name}`);
-      const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-      window.location.href = `mailto:laurarosero2@gmail.com?subject=${subject}&body=${body}`;
-    });
-  }
-});
+<script src="i18n.js"></script>
+</body>
+</html>
