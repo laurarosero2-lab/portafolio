@@ -94,7 +94,7 @@ const STRINGS = {
     tag_social: "Contenido digital",
     tag_illustration: "Ilustración",
 
-    client_tierra_desc: "Cadena de hamburgueserías con presencia en varias ciudades de Colombia. Lideré la evolución de su identidad visual, fortaleciendo su consistencia y posicionamiento en entornos físicos y digitales: desde el manual de marca hasta activaciones en punto de venta, flota de reparto y participación en ferias del sector.",
+    client_tierra_desc: "Cadena de hamburgueserías con presencia en Colombia. Lideré la evolución de su identidad visual, fortaleciendo su consistencia y posicionamiento en entornos físicos y digitales: desde el manual de marca hasta activaciones en punto de venta y participación en ferias del sector.",
     tierra_1_title: "Logotipo y manual de marca",
     tierra_2_title: "Vallas, vehículos y carné",
     tierra_3_title: "Piezas para nuevas sedes",
@@ -119,7 +119,7 @@ const STRINGS = {
     rpac_1_title: "Exploración de línea gráfica",
     rpac_2_title: "Cuaderno, paraguas y merchandising",
     rpac_3_title: "Piezas para Instagram",
-    rpac_4_title: "Registro e historias de la Red",
+    rpac_4_title: "Diseño piezas gráficas redes sociales",
     rpac_5_title: "Serie ilustrada — llegada a Medellín",
     rpac_6_title: "Tiempos de Imaginar",
 
@@ -240,7 +240,7 @@ const STRINGS = {
     tag_social: "Digital content",
     tag_illustration: "Illustration",
 
-    client_tierra_desc: "Burger restaurant chain with locations across Colombia. I led the evolution of its visual identity, strengthening consistency and positioning across physical and digital touchpoints: from the brand manual to point-of-sale activations, delivery fleet and trade-fair appearances.",
+    client_tierra_desc: "Burger restaurant chain with presence in Colombia. I led the evolution of its visual identity, strengthening consistency and positioning across physical and digital touchpoints: from the brand manual to point-of-sale activations and trade-fair appearances.",
     tierra_1_title: "Logo and brand manual",
     tierra_2_title: "Billboards, vehicles and ID badge",
     tierra_3_title: "New-location content",
@@ -265,7 +265,7 @@ const STRINGS = {
     rpac_1_title: "Visual identity exploration",
     rpac_2_title: "Notebook, umbrella and merch",
     rpac_3_title: "Instagram content",
-    rpac_4_title: "Field photography and stories",
+    rpac_4_title: "Social media graphic pieces",
     rpac_5_title: "Illustrated series — arrival in Medellín",
     rpac_6_title: "Tiempos de Imaginar",
 
