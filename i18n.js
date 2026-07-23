@@ -79,6 +79,9 @@ const STRINGS = {
     exp_6_when: "Ene. 2021 — Jul. 2021",
     exp_6_title: "Aprendiz en Diseño Gráfico",
     exp_6_where: "Calcetines Crystal",
+    exp_7_when: "Ago. 2018 — Dic. 2018",
+    exp_7_title: "Comunicadora Social — Practicante",
+    exp_7_where: "Gobernación de Antioquia",
 
     tools_title: "Herramientas",
     tools_desc: "El software con el que trabajo día a día.",
@@ -225,6 +228,9 @@ const STRINGS = {
     exp_6_when: "Jan 2021 — Jul 2021",
     exp_6_title: "Graphic Design Apprentice",
     exp_6_where: "Calcetines Crystal",
+    exp_7_when: "Aug 2018 — Dec 2018",
+    exp_7_title: "Social Communicator — Intern",
+    exp_7_where: "Antioquia Governor's Office",
 
     tools_title: "Tools",
     tools_desc: "The software I work with every day.",
