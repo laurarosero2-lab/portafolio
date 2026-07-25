@@ -80,7 +80,7 @@ const STRINGS = {
     exp_6_title: "Aprendiz en Diseño Gráfico",
     exp_6_where: "Calcetines Crystal",
     exp_7_when: "Ago. 2018 — Dic. 2018",
-    exp_7_title: "Comunicadora Social — Practicante",
+    exp_7_title: "Practicante en Comunicación Social",
     exp_7_where: "Gobernación de Antioquia",
 
     tools_title: "Herramientas",
@@ -104,7 +104,7 @@ const STRINGS = {
     tierra_4_title: "Campaña aniversario 5 años",
 
     client_rionegro_desc: "Como comunicadora social participé en la estrategia de Marca Ciudad Rionegro, fortaleciendo la identidad territorial y la conexión entre la administración municipal, la ciudadanía y los actores del territorio. Apoyé la planeación y ejecución de eventos de ciudad de alto impacto.",
-    rionegro_1_title: "Apoyo en planeación y ejecución de eventos",
+    rionegro_1_title: "Organización y ejecución de eventos",
     rionegro_2_title: "Cobertura y registro de eventos institucionales",
 
     client_alaya_desc: "Escuela de equitación. Piezas de comunicación para clases, eventos y contenido de marca.",
@@ -253,7 +253,7 @@ const STRINGS = {
     tierra_4_title: "5th anniversary campaign",
 
     client_rionegro_desc: "As social communicator I took part in the Marca Ciudad Rionegro communication strategy, strengthening territorial identity and the connection between the local government, residents and community stakeholders. I helped plan and run high-impact city events.",
-    rionegro_1_title: "Event planning and execution support",
+    rionegro_1_title: "Event organization and execution",
     rionegro_2_title: "Institutional event coverage",
 
     client_alaya_desc: "Riding school. Communication pieces for classes, events and brand content.",
