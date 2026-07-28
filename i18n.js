@@ -343,6 +343,35 @@ document.addEventListener('DOMContentLoaded', () => {
     links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
   }
 
+  // portfolio carousels: build dots + track active slide on scroll
+  document.querySelectorAll('.carousel-track').forEach(track => {
+    const slides = Array.from(track.children);
+    const dotsWrap = track.closest('.carousel-card')?.querySelector('.carousel-dots');
+    if (!dotsWrap || slides.length < 2) return;
+
+    slides.forEach((slide, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', `${i + 1} / ${slides.length}`);
+      dot.addEventListener('click', () => {
+        slide.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      });
+      dotsWrap.appendChild(dot);
+    });
+
+    const dots = Array.from(dotsWrap.children);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const idx = slides.indexOf(entry.target);
+          dots.forEach((d) => d.classList.remove('active'));
+          if (dots[idx]) dots[idx].classList.add('active');
+        }
+      });
+    }, { root: track, threshold: 0.6 });
+    slides.forEach((s) => observer.observe(s));
+  });
+
   // contact form -> mailto
   const form = document.querySelector('.contact-form');
   if (form){
