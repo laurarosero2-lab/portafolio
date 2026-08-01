@@ -108,11 +108,9 @@ const STRINGS = {
     rionegro_1_title: "Organización y ejecución de eventos",
     rionegro_2_title: "Cobertura y registro de eventos institucionales",
 
-    client_alaya_desc: "Escuela de equitación. Piezas de comunicación para clases, eventos y contenido de marca.",
+    client_alaya_desc: "Escuela de equitación. Piezas de comunicación para clases y contenido de marca, además del portafolio de servicios de su línea social: el Plan Padrino.",
     alaya_1_title: "La familia detrás de Alaya",
     alaya_2_title: "Escuela de equitación y comunidad",
-
-    client_alaya_social_desc: "Portafolio de servicios para el programa de equinoterapia con enfoque social: piezas para presentar el Plan Padrino y conectar a los niños en lista de espera con padrinos que financian su terapia.",
     alaya_social_1_title: "Plan Padrino",
 
     client_viora_desc: "Estudio de arquitectura. Contenido digital para comunicar el proceso de diseño, la identidad de marca y los cinco símbolos que definen su filosofía de trabajo.",
@@ -260,11 +258,9 @@ const STRINGS = {
     rionegro_1_title: "Event organization and execution",
     rionegro_2_title: "Institutional event coverage",
 
-    client_alaya_desc: "Riding school. Communication pieces for classes, events and brand content.",
+    client_alaya_desc: "Riding school. Communication pieces for classes and brand content, plus the service portfolio for its social program: the Godparent Plan.",
     alaya_1_title: "The family behind Alaya",
     alaya_2_title: "Riding school and community",
-
-    client_alaya_social_desc: "Service portfolio for the equine therapy program with a social focus: pieces presenting the Godparent Plan and connecting children on the waiting list with sponsors who fund their therapy.",
     alaya_social_1_title: "Godparent Plan",
 
     client_viora_desc: "Architecture studio. Digital content communicating the design process, brand identity and the five symbols that define its work philosophy.",
