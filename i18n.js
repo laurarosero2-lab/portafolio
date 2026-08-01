@@ -1,7 +1,7 @@
 /* ===========================================================
    Laura Rosero — i18n + shared behaviour
    All copy lives here so every page can switch ES <-> EN.
-   =========================================================== */
+=========================================================== */
 
 const STRINGS = {
   es: {
@@ -17,6 +17,7 @@ const STRINGS = {
     hero_btn_work: "Ver portafolio",
     hero_btn_contact: "Hablemos",
     hero_tag: "Rionegro, Antioquia\nDisponible para proyectos",
+
     services_strip: "Branding · Diseño editorial · Contenido digital · Comunicación institucional · UX/UI",
 
     work_eyebrow: "Trabajo seleccionado",
@@ -90,8 +91,8 @@ const STRINGS = {
     port_title: "Proyectos.",
     port_desc: "Trabajo organizado por empresa: identidad de marca, contenido digital y aplicaciones para cada cliente.",
     port_independent: "Desde octubre de 2025 trabajo como diseñadora gráfica independiente, desarrollando identidad de marca, diseño editorial y comunicación estratégica para empresas y emprendimientos — acompañando cada proceso de construcción de marca con soluciones visuales alineadas a sus objetivos de posicionamiento.",
-    filter_editorial: "Diseño editorial",
 
+    filter_editorial: "Diseño editorial",
     tag_identity: "Identidad de marca",
     tag_applications: "Aplicaciones corporativas",
     tag_social: "Contenido digital",
@@ -108,14 +109,16 @@ const STRINGS = {
     rionegro_2_title: "Cobertura y registro de eventos institucionales",
 
     client_alaya_desc: "Escuela de equitación. Piezas de comunicación para clases, eventos y contenido de marca.",
-    alaya_1_title: "Clases y jornadas de equitación",
-    alaya_2_title: "Aperturas y bonos regalo",
-    alaya_3_title: "Antes y después: primeras clases",
-    alaya_4_title: "Antes y después: aprendizaje en familia",
-    alaya_5_title: "Nuestro equipo Alaya Equs",
-    alaya_6_title: "Celebraciones a caballo",
-    alaya_7_title: "Mensaje de marca",
-    alaya_8_title: "Antes y después: pequeños jinetes",
+    alaya_1_title: "La familia detrás de Alaya",
+    alaya_2_title: "Escuela de equitación y comunidad",
+
+    client_alaya_social_desc: "Portafolio de servicios para el programa de equinoterapia con enfoque social: piezas para presentar el Plan Padrino y conectar a los niños en lista de espera con padrinos que financian su terapia.",
+    alaya_social_1_title: "Plan Padrino",
+
+    client_viora_desc: "Estudio de arquitectura. Contenido digital para comunicar el proceso de diseño, la identidad de marca y los cinco símbolos que definen su filosofía de trabajo.",
+    viora_1_title: "Así nace un proyecto: las 4 fases",
+    viora_2_title: "Naturaleza y equilibrio",
+    viora_3_title: "Cinco símbolos de la marca",
 
     rpac_title: "Red de Prácticas Artísticas y Culturales",
     client_rpac_desc: "Alcaldía de Medellín. Identidad, aplicaciones corporativas, contenido digital, ilustración y diseño editorial para el programa Nos Mueve la Cultura.",
@@ -143,6 +146,7 @@ const STRINGS = {
     contact_phone_label: "Teléfono / WhatsApp",
     contact_location_label: "Ubicación",
     contact_behance_label: "Behance",
+
     form_name: "Nombre",
     form_email: "Correo electrónico",
     form_message: "Cuéntame sobre tu proyecto",
@@ -152,7 +156,6 @@ const STRINGS = {
     footer_tagline: "Diseño gráfico + comunicación estratégica.",
     footer_rights: "Todos los derechos reservados.",
   },
-
   en: {
     nav_home: "Home",
     nav_about: "About",
@@ -166,6 +169,7 @@ const STRINGS = {
     hero_btn_work: "View portfolio",
     hero_btn_contact: "Let's talk",
     hero_tag: "Rionegro, Antioquia\nAvailable for projects",
+
     services_strip: "Branding · Editorial design · Digital content · Institutional communication · UX/UI",
 
     work_eyebrow: "Selected work",
@@ -239,8 +243,8 @@ const STRINGS = {
     port_title: "Projects.",
     port_desc: "Work organized by client: brand identity, digital content and applications for each company.",
     port_independent: "Since October 2025 I've worked as an independent graphic designer, developing brand identity, editorial design and strategic communication for companies and small businesses — supporting each brand-building process with visual solutions aligned to their positioning goals.",
-    filter_editorial: "Editorial design",
 
+    filter_editorial: "Editorial design",
     tag_identity: "Brand identity",
     tag_applications: "Corporate applications",
     tag_social: "Digital content",
@@ -257,14 +261,16 @@ const STRINGS = {
     rionegro_2_title: "Institutional event coverage",
 
     client_alaya_desc: "Riding school. Communication pieces for classes, events and brand content.",
-    alaya_1_title: "Riding classes and clinics",
-    alaya_2_title: "Openings and gift vouchers",
-    alaya_3_title: "Before and after: first classes",
-    alaya_4_title: "Before and after: learning as a family",
-    alaya_5_title: "Our Alaya Equs team",
-    alaya_6_title: "Celebrations on horseback",
-    alaya_7_title: "Brand message",
-    alaya_8_title: "Before and after: young riders",
+    alaya_1_title: "The family behind Alaya",
+    alaya_2_title: "Riding school and community",
+
+    client_alaya_social_desc: "Service portfolio for the equine therapy program with a social focus: pieces presenting the Godparent Plan and connecting children on the waiting list with sponsors who fund their therapy.",
+    alaya_social_1_title: "Godparent Plan",
+
+    client_viora_desc: "Architecture studio. Digital content communicating the design process, brand identity and the five symbols that define its work philosophy.",
+    viora_1_title: "How a project is born: the 4 phases",
+    viora_2_title: "Nature and balance",
+    viora_3_title: "Five brand symbols",
 
     rpac_title: "Network of Artistic and Cultural Practices",
     client_rpac_desc: "City of Medellín. Identity, corporate applications, digital content, illustration and editorial design for the Nos Mueve la Cultura program.",
@@ -283,8 +289,6 @@ const STRINGS = {
     palacio_1_title: "40th anniversary campaign",
     palacio_2_title: "Billboard installed on site",
 
-    editorial_title: "Annual magazines — Red de Medellín",
-    client_editorial_desc: "Layout for institutional publications for the Dance, Visual Arts and Music Networks of the City of Medellín.",
     editorial_1_title: "Annual magazine layout",
 
     contact_eyebrow: "Contact",
@@ -294,6 +298,7 @@ const STRINGS = {
     contact_phone_label: "Phone / WhatsApp",
     contact_location_label: "Location",
     contact_behance_label: "Behance",
+
     form_name: "Name",
     form_email: "Email",
     form_message: "Tell me about your project",
@@ -369,6 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }, { root: track, threshold: 0.6 });
+
     slides.forEach((s) => observer.observe(s));
   });
 
