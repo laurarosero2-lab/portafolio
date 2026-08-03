@@ -598,7 +598,6 @@ h2.section-title{
 }
 .carousel-slide .thumb.contain img{
   object-fit: contain;
-  padding: 10px;
 }
 
 .carousel-slide .meta{ padding-top:14px; }
