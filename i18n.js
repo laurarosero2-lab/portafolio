@@ -112,12 +112,12 @@ const STRINGS = {
     client_alaya_desc: "Escuela de equitación. Piezas de comunicación para clases y contenido de marca, además del portafolio de servicios de su línea social: el Plan Padrino.",
     alaya_1_title: "Redes sociales",
     alaya_2_title: "Redes sociales",
-    alaya_social_1_title: "Plan Padrino",
+    alaya_social_1_title: "Portafolio Plan Padrino",
 
     client_viora_desc: "Estudio de arquitectura. Contenido digital para comunicar el proceso de diseño, la identidad de marca y los cinco símbolos que definen su filosofía de trabajo.",
-    viora_1_title: "Así nace un proyecto: las 4 fases",
-    viora_2_title: "Naturaleza y equilibrio",
-    viora_3_title: "Cinco símbolos de la marca",
+    viora_1_title: "Redes sociales",
+    viora_2_title: "Redes sociales",
+    viora_3_title: "Redes sociales",
 
     rpac_title: "Red de Prácticas Artísticas y Culturales",
     client_rpac_desc: "Alcaldía de Medellín. Identidad, aplicaciones corporativas, contenido digital, ilustración y diseño editorial para el programa Nos Mueve la Cultura.",
@@ -263,12 +263,12 @@ const STRINGS = {
     client_alaya_desc: "Riding school. Communication pieces for classes and brand content, plus the service portfolio for its social program: the Godparent Plan.",
     alaya_1_title: "Social media",
     alaya_2_title: "Social media",
-    alaya_social_1_title: "Godparent Plan",
+    alaya_social_1_title: "Godparent Plan Portfolio",
 
     client_viora_desc: "Architecture studio. Digital content communicating the design process, brand identity and the five symbols that define its work philosophy.",
-    viora_1_title: "How a project is born: the 4 phases",
-    viora_2_title: "Nature and balance",
-    viora_3_title: "Five brand symbols",
+    viora_1_title: "Social media",
+    viora_2_title: "Social media",
+    viora_3_title: "Social media",
 
     rpac_title: "Network of Artistic and Cultural Practices",
     client_rpac_desc: "City of Medellín. Identity, corporate applications, digital content, illustration and editorial design for the Nos Mueve la Cultura program.",
