@@ -137,6 +137,8 @@ const STRINGS = {
     palacio_2_title: "Valla instalada en punto",
 
     editorial_1_title: "Diagramación de revistas anuales",
+    editorial_2_title: "Portadas de revistas anuales",
+    editorial_3_title: "Maquetación de páginas interiores",
 
     contact_eyebrow: "Contacto",
     contact_title: "Hablemos de tu\npróximo proyecto.",
@@ -288,6 +290,8 @@ const STRINGS = {
     palacio_2_title: "Billboard installed on site",
 
     editorial_1_title: "Annual magazine layout",
+    editorial_2_title: "Annual magazine covers",
+    editorial_3_title: "Interior page layout",
 
     contact_eyebrow: "Contact",
     contact_title: "Let's talk about your\nnext project.",
