@@ -590,13 +590,15 @@ h2.section-title{
 
 /* Variant for graphic / collage pieces (multi-panel social posts with
    text and logos at the edges) — showing the whole piece instead of
-   cropping it like a photo. Used by Alaya Equs and Viora Arquitectura. */
+   cropping it like a photo. Used by Alaya Equs and Viora Arquitectura.
+   No fixed aspect-ratio: the frame follows each image's real height
+   so there's no empty letterboxing space. */
 .carousel-slide .thumb.contain{
-  aspect-ratio: 16/9;
   background: var(--white);
-  border: 1px solid var(--line);
 }
 .carousel-slide .thumb.contain img{
+  width: 100%;
+  height: auto;
   object-fit: contain;
 }
 
