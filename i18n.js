@@ -97,6 +97,7 @@ const STRINGS = {
     tag_applications: "Aplicaciones corporativas",
     tag_social: "Contenido digital",
     tag_illustration: "Ilustración",
+    tag_redessociales: "Redes sociales",
 
     client_tierra_desc: "Cadena de hamburgueserías con presencia en Colombia. Lideré la evolución de su identidad visual, fortaleciendo su consistencia y posicionamiento en entornos físicos y digitales: desde el manual de marca hasta activaciones en punto de venta y participación en ferias del sector.",
     tierra_1_title: "Logotipo y manual de marca",
@@ -109,8 +110,8 @@ const STRINGS = {
     rionegro_2_title: "Cobertura y registro de eventos institucionales",
 
     client_alaya_desc: "Escuela de equitación. Piezas de comunicación para clases y contenido de marca, además del portafolio de servicios de su línea social: el Plan Padrino.",
-    alaya_1_title: "La familia detrás de Alaya",
-    alaya_2_title: "Escuela de equitación y comunidad",
+    alaya_1_title: "Redes sociales",
+    alaya_2_title: "Redes sociales",
     alaya_social_1_title: "Plan Padrino",
 
     client_viora_desc: "Estudio de arquitectura. Contenido digital para comunicar el proceso de diseño, la identidad de marca y los cinco símbolos que definen su filosofía de trabajo.",
@@ -247,6 +248,7 @@ const STRINGS = {
     tag_applications: "Corporate applications",
     tag_social: "Digital content",
     tag_illustration: "Illustration",
+    tag_redessociales: "Social media",
 
     client_tierra_desc: "Burger restaurant chain with presence in Colombia. I led the evolution of its visual identity, strengthening consistency and positioning across physical and digital touchpoints: from the brand manual to point-of-sale activations and trade-fair appearances.",
     tierra_1_title: "Logo and brand manual",
@@ -259,8 +261,8 @@ const STRINGS = {
     rionegro_2_title: "Institutional event coverage",
 
     client_alaya_desc: "Riding school. Communication pieces for classes and brand content, plus the service portfolio for its social program: the Godparent Plan.",
-    alaya_1_title: "The family behind Alaya",
-    alaya_2_title: "Riding school and community",
+    alaya_1_title: "Social media",
+    alaya_2_title: "Social media",
     alaya_social_1_title: "Godparent Plan",
 
     client_viora_desc: "Architecture studio. Digital content communicating the design process, brand identity and the five symbols that define its work philosophy.",
