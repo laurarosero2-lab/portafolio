@@ -118,8 +118,10 @@ const STRINGS = {
     viora_1_title: "Redes sociales",
     viora_2_title: "Redes sociales",
     viora_3_title: "Redes sociales",
+    viora_flipbook_btn: "Ver flipbook interactivo →",
 
     rpac_title: "Red de Prácticas Artísticas y Culturales",
+    rpac_full_name: "Red de Prácticas Artísticas y Culturales | Alcaldía de Medellín",
     client_rpac_desc: "Alcaldía de Medellín. Identidad, aplicaciones corporativas, contenido digital, ilustración y diseño editorial para el programa Nos Mueve la Cultura.",
     rpac_1_title: "Exploración de línea gráfica",
     rpac_2_title: "Cuaderno, paraguas y merchandising",
@@ -271,8 +273,10 @@ const STRINGS = {
     viora_1_title: "Social media",
     viora_2_title: "Social media",
     viora_3_title: "Social media",
+    viora_flipbook_btn: "View interactive flipbook →",
 
     rpac_title: "Network of Artistic and Cultural Practices",
+    rpac_full_name: "Network of Artistic and Cultural Practices | City of Medellín",
     client_rpac_desc: "City of Medellín. Identity, corporate applications, digital content, illustration and editorial design for the Nos Mueve la Cultura program.",
     rpac_1_title: "Visual identity exploration",
     rpac_2_title: "Notebook, umbrella and merch",
