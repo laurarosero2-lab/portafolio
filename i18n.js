@@ -119,6 +119,8 @@ const STRINGS = {
     viora_2_title: "Redes sociales",
     viora_3_title: "Redes sociales",
     viora_flipbook_btn: "Ver flipbook interactivo →",
+    viora_flipbook_label: "Presentación de marca",
+    viora_flipbook_title: "Portafolio de marca Viora Arquitectura",
 
     rpac_title: "Red de Prácticas Artísticas y Culturales",
     rpac_full_name: "Red de Prácticas Artísticas y Culturales | Alcaldía de Medellín",
@@ -274,6 +276,8 @@ const STRINGS = {
     viora_2_title: "Social media",
     viora_3_title: "Social media",
     viora_flipbook_btn: "View interactive flipbook →",
+    viora_flipbook_label: "Brand presentation",
+    viora_flipbook_title: "Viora Arquitectura brand portfolio",
 
     rpac_title: "Network of Artistic and Cultural Practices",
     rpac_full_name: "Network of Artistic and Cultural Practices | City of Medellín",
