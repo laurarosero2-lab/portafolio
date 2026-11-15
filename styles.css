@@ -715,8 +715,4 @@ form.contact-form{ display:flex; flex-direction:column; gap:16px; }
 }
 @media (max-width: 560px){
   .work-grid, .portfolio-grid, .tools-grid{ grid-template-columns: 1fr; }
-  .wrap{ padding: 0 20px; }
-  .cta-band{ padding: 34px 26px; }
-  .carousel-slide{ width: min(320px, 85%); }
-  .carousel-card{ padding: 16px 16px 22px; }
-}
+  .wrap{ padding:
