@@ -388,4 +388,75 @@ function applyTranslations(lang){
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (dict[key] !== undefined){
-      el.innerHTML = dict[key].replace(/\n/g,
+      el.innerHTML = dict[key].replace(/\n/g, '<br>');
+    }
+  });
+  document.querySelectorAll('.lang-toggle button').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+  });
+}
+
+function setLang(lang){
+  localStorage.setItem('lrc_lang', lang);
+  applyTranslations(lang);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const lang = getLang();
+  applyTranslations(lang);
+
+  document.querySelectorAll('.lang-toggle button').forEach(btn => {
+    btn.addEventListener('click', () => setLang(btn.getAttribute('data-lang')));
+  });
+
+  const burger = document.querySelector('.burger');
+  const links = document.querySelector('.nav-links');
+  if (burger && links){
+    burger.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  }
+
+  // portfolio carousels: build dots + track active slide on scroll
+  document.querySelectorAll('.carousel-track').forEach(track => {
+    const slides = Array.from(track.children);
+    const dotsWrap = track.closest('.carousel-card')?.querySelector('.carousel-dots');
+    if (!dotsWrap || slides.length < 2) return;
+
+    slides.forEach((slide, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', `${i + 1} / ${slides.length}`);
+      dot.addEventListener('click', () => {
+        slide.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      });
+      dotsWrap.appendChild(dot);
+    });
+
+    const dots = Array.from(dotsWrap.children);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const idx = slides.indexOf(entry.target);
+          dots.forEach((d) => d.classList.remove('active'));
+          if (dots[idx]) dots[idx].classList.add('active');
+        }
+      });
+    }, { root: track, threshold: 0.6 });
+
+    slides.forEach((s) => observer.observe(s));
+  });
+
+  // contact form -> mailto
+  const form = document.querySelector('.contact-form');
+  if (form){
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = form.querySelector('#name').value;
+      const email = form.querySelector('#email').value;
+      const message = form.querySelector('#message').value;
+      const subject = encodeURIComponent(`Proyecto — ${name}`);
+      const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
+      window.location.href = `mailto:laurarosero2@gmail.com?subject=${subject}&body=${body}`;
+    });
+  }
+});
