@@ -715,4 +715,84 @@ form.contact-form{ display:flex; flex-direction:column; gap:16px; }
 }
 @media (max-width: 560px){
   .work-grid, .portfolio-grid, .tools-grid{ grid-template-columns: 1fr; }
-  .wrap{ padding:
+  .wrap{ padding: 0 20px; }
+  .cta-band{ padding: 34px 26px; }
+  .carousel-slide{ width: min(320px, 85%); }
+  .carousel-card{ padding: 16px 16px 22px; }
+}
+
+
+/* ===========================================================
+   Nueva estructura nov 2026 — misma paleta (rosa, carbón, blanco).
+   Pestañas tipo carpeta, hero con arco, cinta de servicios,
+   lista de servicios, panel de proyectos, etiquetas.
+   =========================================================== */
+.nav-links{ gap:10px; }
+.nav-links a{ padding:9px 20px; border-radius:999px; background:var(--pink-soft); border:1.5px solid var(--charcoal); }
+.nav-links a::after{ display:none; }
+.nav-links a.active{ background:var(--charcoal); color:var(--white); }
+
+.hero2{ background:var(--pink); border-radius:0 0 56px 56px; padding:56px 0 72px; }
+.hero2-inner{ display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:center; }
+.hero2 h1{ font-family:var(--font-display); font-weight:700; text-transform:uppercase; font-size:clamp(3rem,7.4vw,6.4rem); line-height:.9; letter-spacing:-0.02em; margin:14px 0 22px; }
+.hero2 .lede{ font-size:1.1rem; max-width:46ch; color:var(--charcoal-soft); margin:0 0 28px; line-height:1.55; }
+.hero2-photo{ position:relative; max-width:400px; width:100%; margin-left:auto; }
+.arch{ border:3px solid var(--charcoal); border-radius:999px 999px 28px 28px; overflow:hidden; background:var(--pink-deep); aspect-ratio:3/4; }
+.arch img{ width:100%; height:100%; object-fit:cover; object-position:top; }
+.sticker{ position:absolute; bottom:22px; left:-30px; background:var(--charcoal); color:var(--white); border-radius:999px; padding:14px 22px; font-family:var(--font-mono); font-size:.78rem; line-height:1.5; transform:rotate(-6deg); box-shadow:0 12px 30px rgba(0,0,0,.18); }
+
+.marquee{ background:var(--charcoal); color:var(--pink); overflow:hidden; padding:16px 0; margin-top:-28px; position:relative; }
+.marquee-track{ display:flex; width:max-content; animation:marq 38s linear infinite; }
+.marquee-track span{ font-family:var(--font-display); font-weight:600; font-size:1.3rem; white-space:nowrap; padding:0 36px; }
+@keyframes marq{ to{ transform:translateX(-50%); } }
+
+.intro-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:stretch; }
+.intro-card{ background:var(--pink); border:2px solid var(--charcoal); border-radius:32px; padding:40px; display:flex; flex-direction:column; gap:22px; align-items:flex-start; }
+.intro-text{ font-family:var(--font-display); font-weight:600; font-size:clamp(1.3rem,2.3vw,1.8rem); line-height:1.25; margin:0; }
+.svc-list{ display:flex; flex-direction:column; gap:10px; }
+.svc-list a{ flex:1; display:flex; justify-content:space-between; align-items:center; padding:0 28px; border:2px solid var(--charcoal); border-radius:999px; font-family:var(--font-display); font-weight:600; font-size:1.25rem; transition:background .2s ease,color .2s ease; }
+.svc-list a:nth-child(odd){ background:var(--pink-soft); }
+.svc-list a:nth-child(even){ background:var(--pink-deep); }
+.svc-list a:hover{ background:var(--charcoal); color:var(--white); }
+
+.works-panel{ background:var(--pink-deep); border:2px solid var(--charcoal); border-radius:40px; padding:48px; }
+.works-panel .work-card{ background:var(--white); border:2px solid var(--charcoal); }
+.works-panel .section-desc{ color:var(--charcoal); }
+
+.tag-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+.tag{ border:2px solid var(--charcoal); border-radius:999px; padding:10px 22px; font-weight:600; background:var(--white); }
+.tag:nth-child(3n+2){ background:var(--pink); }
+.tag:nth-child(3n+3){ background:var(--pink-deep); }
+
+/* pestañas tipo carpeta en Portafolio */
+.filter-row{ gap:6px; margin-bottom:0; border-bottom:2px solid var(--charcoal); }
+.filter-btn{ border:2px solid var(--charcoal); border-bottom:none; border-radius:18px 18px 0 0; background:var(--pink-soft); padding:12px 20px; margin-bottom:-2px; }
+.filter-btn:nth-child(even){ background:var(--pink-deep); }
+.filter-btn.active, .filter-btn:hover{ background:var(--charcoal); color:var(--white); }
+.portfolio-grid, .carousel-card{ border-radius:28px; }
+.carousel-card{ border:2px solid var(--charcoal); }
+
+.about-hero img{ border:3px solid var(--charcoal); border-radius:999px 999px 28px 28px; }
+.chip-row{ display:flex; gap:10px; flex-wrap:wrap; }
+.chip-row .pill{ font-family:var(--font-body); font-size:.9rem; font-weight:600; padding:10px 18px; border:2px solid var(--charcoal); }
+.chip-row .pill:nth-child(even){ background:var(--pink); }
+
+@media (max-width:880px){
+  .hero2-inner, .intro-grid{ grid-template-columns:1fr; }
+  .hero2-photo{ margin:0 auto; max-width:320px; }
+  .sticker{ left:-10px; }
+  .works-panel{ padding:28px 20px; border-radius:28px; }
+  .svc-list a{ padding:18px 24px; }
+  .nav-links a{ background:none; border:none; padding:4px 2px; }
+}
+
+/* miniaturas del inicio: piezas completas, sin recortar */
+.work-card .thumb.contain{ background:var(--white); margin:0; }
+.work-card .thumb.contain img{ object-fit:contain; padding:10px; }
+.works-panel .work-card:hover .thumb.contain img{ transform:none; }
+
+/* Fomo Festivals: imágenes a la misma altura y ancho natural, sin marcos blancos */
+.carousel-card.fit .carousel-slide{ width:auto; }
+.carousel-card.fit .carousel-slide .thumb{ aspect-ratio:auto; background:none; border-radius:16px; overflow:hidden; }
+.carousel-card.fit .carousel-slide .thumb img{ height:440px; width:auto; max-width:none; object-fit:cover; display:block; border-radius:16px; }
+@media (max-width:560px){ .carousel-card.fit .carousel-slide .thumb img{ height:300px; } }
