@@ -44,7 +44,7 @@ const STRINGS = {
     about_title: "Laura Rosero\nChavarriaga",
     about_p1: "Comunicadora Social y especialista en Diseño Publicitario en Contenidos Digitales, con experiencia en branding, comunicación institucional y contenidos digitales.",
     about_p2: "He participado en proyectos de comunicación pública, marca ciudad y posicionamiento de marca, integrando estrategia, creatividad y diseño para fortalecer la conexión entre las organizaciones y sus audiencias.",
-    about_p3: "Actualmente complemento mi perfil con formación en UX/UI, ampliando mis capacidades para diseñar experiencias digitales centradas en el usuario.",
+    about_p3: "En Fomo Festivals diseño piezas publicitarias, material impreso y digital, flyers, banners, carteles y señalización, además de desarrollar identidad visual y Brand Kits y preparar los archivos para impresión y medios digitales.",
     about_location: "📍 Rionegro / Medellín, Colombia",
 
     edu_title: "Educación",
@@ -62,6 +62,35 @@ const STRINGS = {
     edu_4_where: "Politécnico ASDI",
 
     exp_title: "Experiencia",
+    fomo_s_billboard: "Valla publicitaria",
+    fomo_s_mini: "Valla en miniatura",
+    fomo_s_booth: "Boletería y cartel de tickets",
+    fomo_s_wall: "Muro navideño para fotos",
+    fomo_s_flyers: "Flyers",
+    fomo_s_rollup: "Roll-up de próximos festivales",
+    fomo_s_sf: "Cartel de festivales de South Florida",
+    svc_1: "Branding",
+    svc_2: "Diseño editorial",
+    svc_3: "Contenido digital",
+    svc_4: "Comunicación institucional",
+    svc_5: "UX/UI",
+    fomo_when: "Abr. 2026 — Presente",
+    fomo_title: "Diseñadora Gráfica Independiente",
+    fomo_where: "Fomo Festivals, EE. UU.",
+    client_fomo_desc: "Desde abril de 2026 trabajo como diseñadora gráfica independiente para Fomo Festivals, en Estados Unidos. Diseño piezas publicitarias, flyers, banners, carteles y señalización, material impreso y digital, contenido para redes sociales y campañas publicitarias y promocionales. También desarrollo identidad visual y Brand Kits, aplico y mantengo la identidad visual de las marcas, y actualizo y corrijo piezas gráficas. Adapto y redimensiono los diseños para cada formato, preparo los archivos para impresión y medios digitales, genero y edito imágenes con inteligencia artificial, organizo y gestiono los recursos gráficos, y desarrollo propuestas creativas y conceptos visuales.",
+    fomo_f1: "Diseño de piezas publicitarias",
+    fomo_f2: "Desarrollo de identidad visual y Brand Kits",
+    fomo_f3: "Diseño de contenido para redes sociales",
+    fomo_f4: "Diseño de material impreso y digital",
+    fomo_f5: "Diseño de flyers, banners, carteles y señalización",
+    fomo_f6: "Generación y edición de imágenes con inteligencia artificial",
+    fomo_f7: "Adaptación y redimensionamiento de diseños",
+    fomo_f8: "Preparación de archivos para impresión y medios digitales",
+    fomo_f9: "Aplicación y mantenimiento de la identidad visual de las marcas",
+    fomo_f10: "Actualización y corrección de piezas gráficas",
+    fomo_f11: "Diseño de campañas publicitarias y promocionales",
+    fomo_f12: "Organización y gestión de recursos gráficos",
+    fomo_f13: "Desarrollo de propuestas creativas y conceptos visuales",
     exp_1_when: "Oct. 2025 — Presente",
     exp_1_title: "Diseñadora Gráfica Independiente",
     exp_1_where: "Profesional independiente",
@@ -201,7 +230,7 @@ const STRINGS = {
     about_title: "Laura Rosero\nChavarriaga",
     about_p1: "Social Communicator and Advertising Design specialist in Digital Content, with experience in branding, institutional communication and digital content.",
     about_p2: "I've worked on public communication, city-branding and brand positioning projects, blending strategy, creativity and design to strengthen the connection between organizations and their audiences.",
-    about_p3: "I'm currently complementing my profile with UX/UI training, expanding my ability to design user-centered digital experiences.",
+    about_p3: "At Fomo Festivals I design advertising pieces, print and digital material, flyers, banners, posters and signage, as well as develop visual identities and Brand Kits and prepare files for print and digital media.",
     about_location: "📍 Rionegro / Medellín, Colombia",
 
     edu_title: "Education",
@@ -219,6 +248,35 @@ const STRINGS = {
     edu_4_where: "Politécnico ASDI",
 
     exp_title: "Experience",
+    fomo_s_billboard: "Billboard",
+    fomo_s_mini: "Miniature billboard",
+    fomo_s_booth: "Ticket booth and ticket sign",
+    fomo_s_wall: "Christmas photo wall",
+    fomo_s_flyers: "Flyers",
+    fomo_s_rollup: "Upcoming festivals roll-up",
+    fomo_s_sf: "South Florida festivals sign",
+    svc_1: "Branding",
+    svc_2: "Editorial design",
+    svc_3: "Digital content",
+    svc_4: "Institutional communication",
+    svc_5: "UX/UI",
+    fomo_when: "Apr 2026 — Present",
+    fomo_title: "Independent Graphic Designer",
+    fomo_where: "Fomo Festivals, USA",
+    client_fomo_desc: "Since April 2026 I've worked as an independent graphic designer for Fomo Festivals in the United States. I design advertising pieces, flyers, banners, posters and signage, print and digital material, social media content, and advertising and promotional campaigns. I also develop visual identities and Brand Kits, apply and maintain the brands' visual identity, and update and correct graphic pieces. I adapt and resize designs for each format, prepare files for print and digital media, generate and edit images with artificial intelligence, organize and manage graphic assets, and develop creative proposals and visual concepts.",
+    fomo_f1: "Advertising piece design",
+    fomo_f2: "Visual identity development and Brand Kits",
+    fomo_f3: "Social media content design",
+    fomo_f4: "Print and digital material design",
+    fomo_f5: "Flyer, banner, poster and signage design",
+    fomo_f6: "AI image generation and editing",
+    fomo_f7: "Design adaptation and resizing",
+    fomo_f8: "File preparation for print and digital media",
+    fomo_f9: "Application and upkeep of brands' visual identity",
+    fomo_f10: "Graphic piece updates and corrections",
+    fomo_f11: "Advertising and promotional campaign design",
+    fomo_f12: "Graphic asset organization and management",
+    fomo_f13: "Creative proposals and visual concepts",
     exp_1_when: "Oct 2025 — Present",
     exp_1_title: "Independent Graphic Designer",
     exp_1_where: "Self-employed",
@@ -330,75 +388,4 @@ function applyTranslations(lang){
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (dict[key] !== undefined){
-      el.innerHTML = dict[key].replace(/\n/g, '<br>');
-    }
-  });
-  document.querySelectorAll('.lang-toggle button').forEach(btn => {
-    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
-  });
-}
-
-function setLang(lang){
-  localStorage.setItem('lrc_lang', lang);
-  applyTranslations(lang);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const lang = getLang();
-  applyTranslations(lang);
-
-  document.querySelectorAll('.lang-toggle button').forEach(btn => {
-    btn.addEventListener('click', () => setLang(btn.getAttribute('data-lang')));
-  });
-
-  const burger = document.querySelector('.burger');
-  const links = document.querySelector('.nav-links');
-  if (burger && links){
-    burger.addEventListener('click', () => links.classList.toggle('open'));
-    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
-  }
-
-  // portfolio carousels: build dots + track active slide on scroll
-  document.querySelectorAll('.carousel-track').forEach(track => {
-    const slides = Array.from(track.children);
-    const dotsWrap = track.closest('.carousel-card')?.querySelector('.carousel-dots');
-    if (!dotsWrap || slides.length < 2) return;
-
-    slides.forEach((slide, i) => {
-      const dot = document.createElement('button');
-      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-      dot.setAttribute('aria-label', `${i + 1} / ${slides.length}`);
-      dot.addEventListener('click', () => {
-        slide.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-      });
-      dotsWrap.appendChild(dot);
-    });
-
-    const dots = Array.from(dotsWrap.children);
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const idx = slides.indexOf(entry.target);
-          dots.forEach((d) => d.classList.remove('active'));
-          if (dots[idx]) dots[idx].classList.add('active');
-        }
-      });
-    }, { root: track, threshold: 0.6 });
-
-    slides.forEach((s) => observer.observe(s));
-  });
-
-  // contact form -> mailto
-  const form = document.querySelector('.contact-form');
-  if (form){
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = form.querySelector('#name').value;
-      const email = form.querySelector('#email').value;
-      const message = form.querySelector('#message').value;
-      const subject = encodeURIComponent(`Proyecto — ${name}`);
-      const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-      window.location.href = `mailto:laurarosero2@gmail.com?subject=${subject}&body=${body}`;
-    });
-  }
-});
+      el.innerHTML = dict[key].replace(/\n/g,
